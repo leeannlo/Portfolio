@@ -64,7 +64,7 @@ nav .container ul li.active {
   transition: 0.3s ease background-color;
 }
 nav .container ul li.active a {
-  color: rgb(255, 255, 255);
+  color: #fff !important;
 }
 
 /* Hero (intro) section */
