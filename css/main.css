@@ -58,10 +58,13 @@ html {
   color: #fff !important;
 }
 
-.nav-link.active {
+nav .container ul li.active {
   border-radius: 10px;
   background-color: #FF9899;
-  color: #fff !important;
+  transition: 0.3s ease background-color;
+}
+nav .container ul li.active a {
+  color: rgb(255, 255, 255);
 }
 
 /* Hero (intro) section */
