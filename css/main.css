@@ -52,6 +52,7 @@ html {
 }
 
 .nav-link:hover {
+  transition: color 0.3s ease; 
   border-radius: 10px;
   background-color: #FF9899;
   color: #fff !important;
@@ -297,3 +298,6 @@ footer a:not(.nav-link) {
   margin-bottom: 20px; /* Adjust the margin value as needed */
 }
 
+.section {
+  margin-bottom: 70px;
+}
