@@ -110,3 +110,16 @@
 
 
 })();
+
+function toggleNavbar() {
+  const navbarCollapse = document.getElementById('navbarSupportedContent');
+  const body = document.getElementsByTagName('body')[0];
+
+  if (navbarCollapse.classList.contains('show')) {
+    navbarCollapse.classList.remove('show');
+    body.style.paddingTop = '0px';
+  } else {
+    navbarCollapse.classList.add('show');
+    body.style.paddingTop = navbar.offsetHeight + 'px';
+  }
+}
