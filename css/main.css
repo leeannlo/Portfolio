@@ -304,3 +304,13 @@ footer a:not(.nav-link) {
 .section {
   margin-bottom: 70px;
 }
+
+#skills {
+  padding-top: 10rem; /* Adjust this value to increase or decrease top padding */
+  padding-bottom: 10rem; /* Adjust this value to increase or decrease bottom padding */
+}
+
+#portfolio {
+  padding-top: 1rem; /* Adjust this value to decrease top padding */
+  padding-bottom: 1rem; /* Adjust this value to decrease bottom padding */
+}
