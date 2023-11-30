@@ -306,8 +306,8 @@ footer a:not(.nav-link) {
 }
 
 #skills {
-  padding-top: 10rem; /* Adjust this value to increase or decrease top padding */
-  padding-bottom: 10rem; /* Adjust this value to increase or decrease bottom padding */
+  padding-top: 3rem; /* Adjust this value to increase or decrease top padding */
+  padding-bottom: 7rem; /* Adjust this value to increase or decrease bottom padding */
 }
 
 #portfolio {
