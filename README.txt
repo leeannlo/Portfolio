@@ -11,10 +11,10 @@ Introduction
 Hi! I'm Lee Ann Lo, an IT professional specializing in mobile and web applications. I am passionate about creating user-friendly and impactful solutions to address real-world problems. I aim to improve my skills and contribute to innovative projects continuously.
 -------------------
 Skills
-Programming Languages: JavaScript, TypeScript, HTML, CSS, PHP, SQL, Dart
+Programming Languages: JavaScript, TypeScript, HTML, CSS, PHP, SQL, OutSystem, Jira
 Frameworks: Angular, Express.js, Node.js, Flutter
-Tools: Figma, Canva, VS Code, Microsoft Word, Outlook, PowerPoint, Forms, Google Forms
-Other Skills: UI/UX Design, Technical Support, Content Moderation
+Tools: Figma, Canva, VS Code, Microsoft Word, Outlook, PowerPoint, Forms, Google Forms, Ahrefs, GMass, Semrush, Monday.com
+Other Skills: UI/UX Design, Technical Support, Content Moderation, SEO Outreach
 -------------------
 Projects
 Mosquinator: A Community-Based Mobile and Web Application
