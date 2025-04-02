@@ -26,11 +26,16 @@ DOI: 10.1109/ICICT62343.2024.00059
 -------------------
 Experience
 
+SEO Specialist
+August 12, 2024 - January 10, 2025
+Sourced high-quality backlinks from international websites with 2000+ organic traffic and a Domain Rating (DR) of 40+, focusing on diverse niches.
+Engaged with site owners to negotiate sponsored posts and content placements, securing valuable link-building partnerships to enhance SEO performance.
+
 Front-end Web Developer Intern at QuickReach, Inc.
 May 6, 2024 - June 26, 2024
 
 Attended daily standups, team meetings, internal demos, and discussions.
-Designed and coded various pages including login, registration, Forgot Password, Under Maintenance, and Notification pages.
+Designed and coded various pages including login, registration, Forgot Password, Under Maintenance, and Notification.
 Created and enhanced UI mockups, improved user experience, researched and developed UI features, and fixed registration process bugs.
 Reviewed and enhanced documentation and developed empty state pages.
 
@@ -45,7 +50,7 @@ Created 2 animated informational videos about OTP Scam Awareness and Information
 
 
 Freelance Content Moderator (Tweet topic evaluator) at Innodata Inc.
-June 8, 2021 - January 22, 2022
+June 8, 2021 - Jan 22, 2022
 
 Identified and classified inappropriate content for filtering and removal based on client requirements.
 Collaborated with Senior QA for feedback and coaching.
