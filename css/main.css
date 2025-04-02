@@ -45,6 +45,14 @@ html {
   color: rgba(0, 0, 0, 0.8) !important;
 }
 
+.social-nav {
+  display: flex;
+  justify-content: center; /* Centers the nav horizontally */
+  align-items: center; /* Ensures vertical alignment */
+  text-align: center; /* Aligns inline elements */
+  margin-top: 20px; /* Optional: Adjust spacing */
+}
+
 .social-nav .nav-link {
   padding: 0 0.5rem;
   font-size: 1.1rem;
