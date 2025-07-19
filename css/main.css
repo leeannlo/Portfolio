@@ -310,12 +310,12 @@ footer a:not(.nav-link) {
 }
 
 .section {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 #skills {
   padding-top: 3rem; /* Adjust this value to increase or decrease top padding */
-  padding-bottom: 3rem; /* Adjust this value to increase or decrease bottom padding */
+  padding-bottom: 1rem; /* Adjust this value to increase or decrease bottom padding */
 }
 
 #portfolio {
