@@ -1,71 +1,108 @@
-My Portfolio
+---
 
-Lee Ann Lo
+# 👩‍💻 Lee Ann Lo — Portfolio
 
-Graduate of Bachelor of Science in Information Technology
-Specialization: Mobile and Web Applications
-National University Philippines - Manila (Main Campus)
-SMFI Scholar
--------------------
-Introduction
-Hi! I'm Lee Ann Lo, an IT professional specializing in mobile and web applications. I am passionate about creating user-friendly and impactful solutions to address real-world problems. I aim to improve my skills and contribute to innovative projects continuously.
--------------------
-Skills
-Programming Languages: JavaScript, TypeScript, HTML, CSS, PHP, SQL, OutSystem, Jira
-Frameworks: Angular, Express.js, Node.js, Flutter
-Tools: Figma, Canva, VS Code, Microsoft Word, Outlook, PowerPoint, Forms, Google Forms, Ahrefs, GMass, Semrush, Monday.com
-Other Skills: UI/UX Design, Technical Support, Content Moderation, SEO Outreach
--------------------
-Projects
-Mosquinator: A Community-Based Mobile and Web Application
-Role: UI/UX Designer
-Technologies Used: MEAN Stack, Flutter
-Description: Developed to combat dengue and raise awareness among residents of Pasig City.
-Publication: Published in IEEE, Computer.ORG, Scopus, and Ei index.
-DOI: 10.1109/ICICT62343.2024.00059
--------------------
-Experience
+**Mobile & Web Applications | UI/UX Design | Front-End Development**
 
-SEO Specialist
-August 12, 2024 - January 10, 2025
-Sourced high-quality backlinks from international websites with 2000+ organic traffic and a Domain Rating (DR) of 40+, focusing on diverse niches.
-Engaged with site owners to negotiate sponsored posts and content placements, securing valuable link-building partnerships to enhance SEO performance.
+📍 Pasig City, Philippines
+🎓 Magna Cum Laude, BS in Information Technology – National University Manila
+🎖 SM Foundation Scholar
 
-Front-end Web Developer Intern at QuickReach, Inc.
-May 6, 2024 - June 26, 2024
+---
 
-Attended daily standups, team meetings, internal demos, and discussions.
-Designed and coded various pages including login, registration, Forgot Password, Under Maintenance, and Notification.
-Created and enhanced UI mockups, improved user experience, researched and developed UI features, and fixed registration process bugs.
-Reviewed and enhanced documentation and developed empty state pages.
+## 👋 Introduction
 
+Hi! I’m **Lee Ann Lo**, an IT professional passionate about designing and developing intuitive, user-friendly, and meaningful digital experiences. With a strong foundation in mobile and web technologies, I aim to continuously grow, adapt, and contribute to impactful and innovative projects.
 
-IT Intern - Technical Support at Yokogawa Philippines, Inc.
-December 6, 2023 - March 6, 2024
+---
 
-Set up laptops and computers according to the company’s MIS Standard Setup.
-Assisted employees with technical issues, troubleshooting hardware and software problems, and providing timely and effective solutions.
-Collaborated on the enhancement of DSEFORMS with improved UI/UX Design in Figma.
-Created 2 animated informational videos about OTP Scam Awareness and Information Security Policy for broadcast.
+## 🛠 Skills
 
+### 🧠 Core Expertise
 
-Freelance Content Moderator (Tweet topic evaluator) at Innodata Inc.
-June 8, 2021 - Jan 22, 2022
+* **UI/UX Design** (Figma, Relume, Canva)
+* **Front-End Development** (HTML, CSS, JavaScript, TypeScript, Angular)
+* **SEO Outreach** (Ahrefs, GMass, SEMrush)
+* **Technical Support** & **Content Moderation**
 
-Identified and classified inappropriate content for filtering and removal based on client requirements.
-Collaborated with Senior QA for feedback and coaching.
--------------------
-Education
-Bachelor of Science in Information Technology
-National University Philippines - Manila (Main Campus)
-SMFI Scholar
-Dean’s Lister: 9 Terms / 12 Terms
-CGWA: 3.61 / 4.00
-Senior High School: Rizal High School - STEM, With Honors
--------------------
-Contact Information
-Email: leeanndclo@gmail.com
-LinkedIn: linkedin.com/in/lee-ann-dc-lo
-Contact No.: +639063211845
--------------------
-Link: https://bit.ly/leeannlo-portfolio
+### 💻 Technical Stack
+
+* **Languages**: JavaScript, TypeScript, HTML, CSS, PHP, SQL
+* **Frameworks**: Angular, Node.js, Express.js, Flutter
+* **Tools**: VS Code, Jira, Monday.com, Microsoft 365, Google Workspace, OutSystems
+
+---
+
+## 💼 Experience
+
+### **Junior Developer**
+
+**SM Supermalls** – *January 2025 – Present*
+
+* Contributed to the revamp of tenant and resource management systems.
+* Assisted in enhancing system performance and document repository workflows.
+
+### **SEO Specialist**
+
+**QWERTYLabs Inc.** – *August 2024 – January 2025*
+
+* Sourced high-authority backlinks (2000+ organic traffic, DR 40+).
+* Negotiated and secured partnerships for sponsored content across diverse niches.
+
+### **Front-End Web Developer Intern**
+
+**QuickReach, Inc.** – *May 2024 – June 2024*
+
+* Designed and developed UI pages (Login, Registration, Error States, etc.).
+* Participated in daily agile routines and enhanced UX flows and documentation.
+
+### **IT Intern – Technical Support**
+
+**Yokogawa Philippines, Inc.** – *December 2023 – March 2024*
+
+* Provided tech support and hardware/software troubleshooting.
+* Enhanced DSEFORMS UI/UX and created animated educational videos for internal awareness.
+
+### **Freelance Content Moderator**
+
+**Innodata Inc.** – *June 2021 – January 2022*
+
+* Evaluated tweet content and collaborated with QA for moderation accuracy.
+
+---
+
+## 📱 Projects
+
+### **Mosquinator: A Dengue Awareness App**
+
+*UI/UX Designer | MEAN Stack + Flutter*
+
+* A community-based app that provides real-time dengue alerts and educational resources for Pasig City residents.
+* 📚 **Published in IEEE, Computer.ORG, Scopus, Ei Index**
+* 🔗 DOI: [10.1109/ICICT62343.2024.00059](https://doi.org/10.1109/ICICT62343.2024.00059)
+
+---
+
+## 🎓 Education
+
+**Bachelor of Science in Information Technology**
+*Specialization in Mobile and Web Applications*
+National University Philippines – Manila
+
+* **Magna Cum Laude** | CGWA: 3.61 / 4.00
+* **Dean’s Lister** (9 out of 12 Terms)
+* **SM Foundation Scholar**
+
+**Senior High School**
+Rizal High School – STEM Strand | *With Honors*
+
+---
+
+## 📬 Contact
+
+* 📧 Email: [leeanndclo@gmail.com](mailto:leeanndclo@gmail.com)
+* 💼 LinkedIn: [linkedin.com/in/lee-ann-dc-lo](https://linkedin.com/in/lee-ann-dc-lo)
+* 📱 Phone: +63 906 321 1845
+* 🔗 Portfolio: [bit.ly/leeannlo-portfolio](https://bit.ly/leeannlo-portfolio)
+
+---
