@@ -62,8 +62,6 @@ National University Philippines – Manila
 
 Magna Cum Laude | CGWA: 3.61 / 4.00
 
-Dean’s List (9 out of 12 Terms)
-
 SM Foundation Scholar
 
 Senior High School
