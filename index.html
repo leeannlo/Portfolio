@@ -28,18 +28,21 @@
       </style>
     </noscript>
   </head>
-  <body id="home" data-bs-spy="scroll" data-bs-target="#header-nav">
-    <header class="bg-light">
+  <body id="home" data-bs-spy="scroll" data-bs-target="#header-nav" data-bs-smooth-scroll="true" class="position-relative">
+    <header class="bg-light sticky-top">
       <nav class="navbar navbar-expand-lg navbar-light bg-light" id="header-nav" role="navigation">
-        <div class="container"><a class="link-dark navbar-brand site-title mb-0" href="#home">Lee Ann's Portfolio</a>
-          <button class="navbar-toggler" type="button" onclick="toggleNavbar()"><span class="navbar-toggler-icon"></span></button>
+        <div class="container">
+          <a class="link-dark navbar-brand site-title mb-0" href="#home">Lee Ann's Portfolio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto me-2">
-              <li class="nav-item home active"><a class="nav-link" href="#Home">Home</a></li>&nbsp;
-              <li class="nav-item about"><a class="nav-link" href="#About_Me">About Me</a></li>&nbsp;
-              <li class="nav-item skills"><a class="nav-link" href="#Skills">Skills</a></li>&nbsp;
-              <li class="nav-item portfolio"><a class="nav-link" href="#Portfolio">Portfolio</a></li>&nbsp;
-              <li class="nav-item capstone"><a class="nav-link" href="#Capstone">Capstone Project</a></li>&nbsp;
+              <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#About_Me">About Me</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Skills">Skills</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Portfolio">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Capstone">Capstone Project</a></li>
             </ul>
           </div>
         </div>
@@ -47,280 +50,281 @@
     </header>
     <div class="page-content">
       <div id="content">
-<header>
-  <section class="cover bg-light" id="Home">
-    <div class="container px-3">
-      <div class="row">
-        <div class="col-lg-6 p-2 text-center"><img class="img-fluid" src="assets/illustrations/home_avatar.png" width="500" height="500" alt="hello"/></div>
-        <div class="col-lg-6">
-          <div class="mt-5 text-center">
-            <p class="lead text-uppercase mb-1">Hello!</p>
-            <h1 class="intro-title marker" data-aos="fade-left" data-aos-delay="5">I’m Lee Ann Lo,</h1>
-            <p class="lead fw-normal mt-3" data-aos="fade-up" data-aos-delay="5">
-              <strong>Creative Technologist</strong><br>
-              <span style="font-size: 0.95em;">(Design <span>&times;</span> Code <span>&times;</span> Strategy)</span>
-            </p>
-            <div class="social-nav" data-aos="fade-up" data-aos-delay="5">
+        <header>
+          <section class="cover bg-light" id="home">
+            <div class="container px-3">
+              <div class="row">
+                <div class="col-lg-6 p-2 text-center"><img class="img-fluid" src="assets/illustrations/home_avatar.png" width="500" height="500" alt="hello"/></div>
+                <div class="col-lg-6">
+                  <div class="mt-5 text-center">
+                    <p class="lead text-uppercase mb-1">Hello!</p>
+                    <h1 class="intro-title marker" data-aos="fade-left" data-aos-delay="5">I’m Lee Ann Lo,</h1>
+                    <p class="lead fw-normal mt-3" data-aos="fade-up" data-aos-delay="5">
+                      <strong>Creative Technologist</strong><br>
+                      <span style="font-size: 0.95em;">(Design <span>&times;</span> Code <span>&times;</span> Strategy)</span>
+                    </p>
+                    <div class="social-nav" data-aos="fade-up" data-aos-delay="5">
+                      <nav role="navigation">
+                        <ul class="nav">
+                          <li class="nav-item"><a class="nav-link" href="leeanndclo@gmail.com" title="Email"><i class="fas fa-envelope"></i></a></li>
+                          <li class="nav-item"><a class="nav-link" href="https://github.com/leeannlo" title="GitHub"><i class="fab fa-github"></i></a></li>
+                          <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/lee-ann-dc-lo/" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                      </nav>
+                    </div>            
+                    <div class="mt-2" data-aos="fade-up" data-aos-delay="200">
+                      <a class="btn btn-custom-color shadow-sm mt-1 hover-effect" href="#About_Me">Get In Touch <i class="fas fa-arrow-right"></i></a>
+                    </div>          
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="wave-bg"></div>
+        </header>
+          <section class="section pt-4 px-3 px-lg-2" id="About_Me">
+            <div class="container-narrow">
+              <div class="text-center mb-3 mt-2">
+                <h2 class="marker marker-center">About Me</h2>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mt-3" data-aos="fade-left" data-aos-delay="50">
+                  <div class="mb-3">
+                    <h4 class="intro-title marker">Hello! I’m Lee Ann Lo,</h4>
+                  </div>
+                    <p style="text-align: justify;">
+                      As a graduate of <strong>Bachelor of Science in Information Technology</strong> with a specialization in <strong>Mobile and Web Applications</strong> from <strong>National University Philippines</strong>, I possess strong technical and design skills. I am a grateful recipient of the <strong>SM Foundation Inc. College Scholarship</strong> and have hands-on experience in <strong>UI/UX design, SEO Outreach, front-end development</strong>, and <strong>technical support</strong>. My passion lies in <strong>creating innovative designs and solutions</strong> that enhance user experiences and address real-world challenges. I am eager to explore new opportunities that will allow me to further develop my skills and contribute to impactful, forward-thinking projects.
+                    </p>          
+                </div>
+                <div class="col-md-5 offset-md-1 mt-2">
+                  <div class="row mt-5 mb-2">
+                    <div class="col-sm-2">
+                      <div class="pb-1">Email:</div>
+                    </div>
+                    <div class="col-sm-10">
+                      <div class="pb-1 fw-bolder"> leeanndclo@gmail.com  </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="pb-1">Phone:</div>
+                    </div>
+                    <div class="col-sm-10">
+                      <div class="pb-1 fw-bolder">+639063211845</div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="pb-1">Address:</div>
+                    </div>
+                    <div class="col-sm-10">
+                      <div class="pb-1 fw-bolder">Pasig City, Metro Manila, 1600 Philippines</div>
+                    </div>
+                  </div>
+                  <div class="mb-5 mt-2 text-center">
+                    <a href="mailto:leeanndclo@gmail.com?subject=Request for Resume&body=Hello, I would like to request a copy of your resume." 
+                      class="btn btn-primary shadow-sm mt-2 mb-3 hover-effect">
+                      Request Resume <i class="fas fa-envelope"></i>
+                    </a>        
+                  </div>
+                </div>
+                <!--<div class="col-md-5 offset-md-1 mb-5 mt-5"><img class="avatar img-fluid mt-2" src="assets/leeannlo.jpg" width="400" height="400" alt="Lee Ann Lo"/></div>-->
+              </div>
+            </div>
+          </section>
+          <section class="section px-5 px-lg-2 pt-2 mt-2" id="Skills">
+            <div class="container-narrow mt-2 mb-5">
+              <div class="text-center mb-5 mt-4">
+                  <h2 class="marker marker-center">My Skills</h2>
+              </div>
+              <div class="text-center">
+                  <p class="mx-auto mb-3" style="max-width:600px">I am a quick learner focusing on a multitude of skills required for Mobile and Web Applications Design and Development</p>
+              </div>
+              <div class="row mb-5">
+                  <div class="col-md-6">
+                      <div class="card mb-2 h-100 d-flex flex-column" data-aos="fade-right" data-aos-delay="100">
+                          <div class="card-header px-3 py-2">
+                              <div class="d-flex justify-content-between">
+                                  <div>
+                                      <h3 class="h5 mb-1 mt-1">Soft Skills and Interests</h3>
+                                      <div class="text-muted text-small"><small>Focuses on Personal and Professional Growth</small></div>
+                                  </div>
+                                  <img src="assets/services/graphic-design.svg" width="48" height="48" alt="ui-ux"/>
+                              </div>
+                          </div>
+                          <div class="card-body px-3 py-2">
+                          <strong>Soft Skills</strong>
+                            <p>&#11185; Adaptability</p>
+                            <p>&#11185; Problem-solving</p>
+                            <p>&#11185; Attention to detail</p>
+                            <p>&#11185; Collaboration & teamwork</p>
+                          <strong>Interests</strong>
+                            <p>&#11185; UI/UX design & accessibility</p>
+                            <p>&#11185; Web & mobile app development</p>
+                            <p>&#11185; Digital marketing & SEO</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 d-flex">
+                      <div class="card mb-2 h-100 d-flex flex-column" data-aos="fade-right" data-aos-delay="100">
+                          <div class="card-header px-3 py-2">
+                              <div class="d-flex justify-content-between">
+                                  <div>
+                                      <h3 class="h5 mb-1 mt-1">Technical Skills</h3>
+                                      <div class="text-muted text-small">Proficiency Level: <small>Novice - Intermediate</small></div>
+                                  </div>
+                                  <img src="assets/services/ui-ux.svg" width="48" height="48" alt="ui-ux"/>
+                              </div>
+                          </div>
+                          <div class="card-body px-3 py-2">
+                              <p class="small-text">
+                                &#11185; <strong>Skilled in developing web and mobile applications</strong> using 
+                                <strong>HTML5, CSS3, Angular, PHP, SQL, OutSystems, WordPress</strong>, and 
+                                <strong>Wix</strong>, with strong familiarity in project tracking via 
+                                <strong>Jira</strong> and version control with <strong>Git</strong>.
+                              </p>
+                              <p class="small-text">&#11185; <strong>Experienced in SEO and digital marketing tools</strong> such as 
+                                <strong>Ahrefs, SEMrush, GMass</strong>, and project management using <strong>Monday.com</strong>.</p>
+                              <p class="small-text">&#11185; <strong>Skilled in development and productivity tools</strong>, including 
+                                <strong>VS Code, Microsoft 365, and Google Workspace</strong>.</p>
+                              <p class="small-text">&#11185; <strong>Adept in graphic design and presentation creation</strong>, excelling in 
+                                <strong>PowerPoint for dynamic presentations</strong>, <strong>Canva for business and branding design</strong>, 
+                                and <strong>Figma for UI/UX prototyping of web and mobile applications</strong>.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <section class="section px-2 px-lg-4 pt-3 mb-5" id="Portfolio">
+            <div class="container">
+              <div class="text-center mb-5">
+                <h2 class="marker marker-center mt-5">Portfolio </h2>
+              </div>
+              <div class="grid bp-gallery pb-3" data-aos="zoom-in-up" data-aos-delay="100">
+                <div class="grid-sizer"></div>
+                <div class="grid-item"><a href="#">
+                    <figure class="portfolio-item"><img src="assets/portfolio/1-small.png" data-bp="assets/portfolio/1.png"/>
+                      <figcaption>
+                        <h4 class="h5 mb-0">Mosquinator</h4>
+                        <div>Capstone Project 1 & 2</div>
+                      </figcaption>
+                    </figure></a></div>
+                <div class="grid-item"><a href="#">
+                    <figure class="portfolio-item"><img src="assets/portfolio/2-small.png" data-bp="assets/portfolio/2.png" data-caption="Example of an optional caption."/>
+                      <figcaption> 
+                        <h4 class="h5 mb-0">Math Quiz Game</h4>
+                        <div>Applications Development and Emerging Technologies</div>                           
+                      </figcaption>
+                    </figure></a></div>
+                <div class="grid-item"><a href="#">
+                    <figure class="portfolio-item"><img src="assets/portfolio/3-small.png" data-bp="assets/portfolio/3.png" data-caption="Example of an optional caption."/>
+                      <figcaption> 
+                        <h4 class="h5 mb-0">Philippine HistoQuiz</h4>
+                        <div>Mobile Programming</div>
+                      </figcaption>
+                    </figure></a></div>
+                <div class="grid-item"><a href="#">
+                    <figure class="portfolio-item"><img src="assets/portfolio/4-small.png" data-bp="assets/portfolio/4.png"/>
+                      <figcaption>
+                        <h4 class="h5 mb-0">Linking Aid: EPDM Application (Emergency Preparedness and Disaster Mitigation)</h4>
+                        <div>Platform Technologies</div>
+                      </figcaption>
+                    </figure></a></div>
+                <div class="grid-item"><a href="#">
+                    <figure class="portfolio-item"><img src="assets/portfolio/5-small.png" data-bp="assets/portfolio/5.png"/>
+                      <figcaption>
+                        <h4 class="h5 mb-0">Jethy's Recipe App</h4>
+                        <div>Advanced Mobile Programming</div>
+                      </figcaption>
+                    </figure></a></div>
+                <div class="grid-item"><a href="#">
+                    <figure class="portfolio-item"><img src="assets/portfolio/6-small.png" data-bp="assets/portfolio/6.png"/>
+                      <figcaption>
+                        <h4 class="h5 mb-0">Kpop Merch</h4>
+                        <div>Integrative Programming and Technologies</div>
+                      </figcaption>
+                    </figure></a></div>
+                <div class="grid-item"><a href="#">
+                    <figure class="portfolio-item"><img src="assets/portfolio/7-small.png" data-bp="assets/portfolio/7.png"/>
+                      <figcaption>
+                        <h4 class="h5 mb-0">Ka Techy Facts - Tech Checks</h4>
+                        <div>The Entrepreneurial Mind</div>
+                      </figcaption>
+                    </figure></a></div>
+                <div class="grid-item"><a href="#">
+                    <figure class="portfolio-item"><img src="assets/portfolio/8-small.png" data-bp="assets/portfolio/8.png"/>
+                      <figcaption>
+                        <h4 class="h5 mb-0">Among Us</h4>
+                        <div>Web Systems and Technologies</div>
+                      </figcaption>
+                    </figure>
+                  </a></div>
+              </div>
+              <div class="mb-5 mt-2 text-center">
+              <a href="mailto:leeanndclo@gmail.com?subject=Request%20for%20Portfolio&body=Hi%20Lee%20Ann%2C%20I'm%20interested%20in%20viewing%20your%20UI%2FUX%20designs%2C%20graphics%2C%20and%20other%20projects." 
+                class="btn btn-primary shadow-sm mt-2 mb-3 hover-effect">
+                ✨ View More Projects (UI/UX, Graphics & More) <i class="fas fa-envelope ms-1"></i>
+              </a>
+            </div>
+            </div>
+          </section>
+          <section class="section px-3 px-lg-4 pt-3 mt-5" id="Capstone">
+            <div class="container-narrow">
+              <div class="text-center mb-5">
+                <h2 class="marker marker-center">Capstone Project</h2>
+              </div>
+                  <div class="card mb-3" data-aos="fade-left" data-aos-delay="200">
+                    <div class="card-header px-3 py-2">
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <h3 class="h5 mb-1">Capstone Project 1 and 2 (Thesis)</h3>
+                          <div class="text-muted text-small">Mosquinator: A Community-Based Mobile and Web Application Framework for combating Dengue and providing Awareness for Residents of Pasig City</small></div>
+                        </div><img src="assets/services/full-stack.svg" width="48" height="48" alt="full stack"/>
+                      </div>
+                    </div>
+                    <div class="card-body px-3 py-2">
+                      <p>
+                        This study is about a community-oriented web and mobile application that will advocate a practical approach to providing a platform for reporting concerns and the exchange of information between the <strong>Pasig Dengue Task Force</strong> and the residents of <strong>Pasig City</strong> about dengue-related problems or incidents, as well as promoting awareness and knowledge regarding mosquito-borne diseases for the residents.
+                      </p>
+                      <p>
+                        This project was developed by our team, <strong>Innovation Geeks</strong>, which consists of a four-member group of IT students specializing in <strong>Mobile and Web Applications</strong> under the guidance of <strong>Prof. Leonila B. Valdez</strong>, a faculty member of the College of Computing and Information Technologies at the <strong>National University Philippines - Manila (Main Campus)</strong>.
+                      </p>            
+                      
+                      <p>Proponents of the Study</p>
+                      
+                      <p>&nbsp;&nbsp;• Project Manager: Robert Jay C. Cruz - cruzrc@students.national-u.edu.ph</p>
+                      <p>&nbsp;&nbsp;• Documenter: Ralph Christian S. Cristobal - cristobalrs@students.national-u.edu.ph</p>
+                      <p>&nbsp;&nbsp;• Systems Analyst & UI/UX Designer: Lee Ann D. Lo - lold@students.national-u.edu.ph</p>
+                      <p>&nbsp;&nbsp;• Web and Mobile Programmer: Rene Victor A. San Juan Jr. - sanjuanra@students.national-u.edu.ph</p>
+
+                      <p container text-center mt-5><a href="https://mosquinator.online/" class="btn btn-primary" target="_blank">🌐 Visit Mosquinator Website</a></p>
+                      <p container text-center mt-5><a href="https://drive.google.com/file/d/19YoOjXzBr-Y76OQf0rON0pstQDwiqUzV/view?usp=sharing" class="btn btn-success" target="_blank">📱 Download Mosquinator Mobile App (APK)</a></p>
+                      <p container text-center mt-5><a href="https://ieeexplore.ieee.org/abstract/document/10541723" class="btn btn-secondary">📖 Research Publication</a></p>
+                    </div>
+                  </div>
+            </div>
+          </section>
+      </div>
+    </div>
+    <footer class="pt-1 pb-1 text-center bg-light">
+      <div class="container">
+        <div class="my-2">
+        <strong>Lee Ann Lo</strong><br>
+        <strong>Creative Technologist</strong><br>
+          <span style="font-size: 0.95em;">(Design <span>&times;</span> Code <span>&times;</span> Strategy)</span>
+            <div class="social-nav">
               <nav role="navigation">
-                <ul class="nav">
-                  <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/leeanndclo" title="Facebook"><i class="fab fa-facebook"></i></a></li>
-                  <li class="nav-item"><a class="nav-link" href="https://github.com/leeannlo" title="GitHub"><i class="fab fa-github"></i></a></li>
-                  <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/lee-ann-dc-lo/" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                <ul class="nav justify-content-center">
+                  <li class="nav-item"><a class="nav-link" href="leeanndclo@gmail.com" title="Facebook"><i class="fas fa-envelope"></i><span class="menu-title sr-only">Email</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://github.com/leeannlo" title="GitHub"><i class="fab fa-github"></i><span class="menu-title sr-only">GitHub</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/lee-ann-dc-lo/" title="LinkedIn"><i class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a></li>
                 </ul>
               </nav>
-            </div>            
-            <div class="mt-2" data-aos="fade-up" data-aos-delay="200">
-              <a class="btn btn-custom-color shadow-sm mt-1 hover-effect" href="#About_Me">Get In Touch <i class="fas fa-arrow-right"></i></a>
-            </div>          
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="wave-bg"></div>
-</header>
-<section class="section pt-5 px-3 px-lg-2" id="About_Me">
-  <div class="container-narrow">
-    <div class="text-center mb-3 mt-5">
-      <h2 class="marker marker-center">About Me</h2>
-    </div>
-    <div class="row">
-      <div class="col-md-6 mt-3" data-aos="fade-left" data-aos-delay="50">
-        <div class="mb-3">
-          <h4 class="intro-title marker">Hello! I’m Lee Ann Lo,</h4>
-        </div>
-          <p style="text-align: justify;">
-            As a graduate of <strong>Bachelor of Science in Information Technology</strong> with a specialization in <strong>Mobile and Web Applications</strong> from <strong>National University Philippines</strong>, I possess strong technical and design skills. I am a grateful recipient of the <strong>SM Foundation Inc. College Scholarship</strong> and have hands-on experience in <strong>UI/UX design, SEO Outreach, front-end development</strong>, and <strong>technical support</strong>. My passion lies in <strong>creating innovative designs and solutions</strong> that enhance user experiences and address real-world challenges. I am eager to explore new opportunities that will allow me to further develop my skills and contribute to impactful, forward-thinking projects.
-          </p>          
-      </div>
-      <div class="col-md-5 offset-md-1 mt-5">
-        <div class="row mt-5 mb-2">
-          <div class="col-sm-2">
-            <div class="pb-1">Email:</div>
-          </div>
-          <div class="col-sm-10">
-            <div class="pb-1 fw-bolder"> leeanndclo@gmail.com  </div>
-          </div>
-          <div class="col-sm-2">
-            <div class="pb-1">Phone:</div>
-          </div>
-          <div class="col-sm-10">
-            <div class="pb-1 fw-bolder">+639063211845</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="pb-1">Address:</div>
-          </div>
-          <div class="col-sm-10">
-            <div class="pb-1 fw-bolder">Pasig City, Metro Manila, 1600 Philippines</div>
-          </div>
-        </div>
-        <div class="mb-5 mt-2 text-center">
-          <a href="mailto:leeanndclo@gmail.com?subject=Request for Resume&body=Hello, I would like to request a copy of your resume." 
-            class="btn btn-primary shadow-sm mt-2 mb-3 hover-effect">
-            Request Resume <i class="fas fa-envelope"></i>
-          </a>        
-        </div>
-      </div>
-      <!--<div class="col-md-5 offset-md-1 mb-5 mt-5"><img class="avatar img-fluid mt-2" src="assets/leeannlo.jpg" width="400" height="400" alt="Lee Ann Lo"/></div>-->
-    </div>
-  </div>
-</section>
-<section class="section px-5 px-lg-2 pt-2 mt-2" id="Skills">
-  <div class="container-narrow mt-5 mb-5">
-    <div class="text-center mb-5 mt-5">
-        <h2 class="marker marker-center">My Skills</h2>
-    </div>
-    <div class="text-center">
-        <p class="mx-auto mb-3" style="max-width:600px">I am a quick learner focusing on a multitude of skills required for Mobile and Web Applications Design and Development</p>
-    </div>
-    <div class="row mb-5">
-        <div class="col-md-6">
-            <div class="card mb-2 h-100 d-flex flex-column" data-aos="fade-right" data-aos-delay="100">
-                <div class="card-header px-3 py-2">
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            <h3 class="h5 mb-1 mt-1">Soft Skills and Interests</h3>
-                            <div class="text-muted text-small"><small>Focuses on Personal and Professional Growth</small></div>
-                        </div>
-                        <img src="assets/services/graphic-design.svg" width="48" height="48" alt="ui-ux"/>
-                    </div>
-                </div>
-                <div class="card-body px-3 py-2">
-                <strong>Soft Skills</strong>
-                  <p>&#11185; Adaptability</p>
-                  <p>&#11185; Problem-solving</p>
-                  <p>&#11185; Attention to detail</p>
-                  <p>&#11185; Collaboration & teamwork</p>
-                <strong>Interests</strong>
-                  <p>&#11185; UI/UX design & accessibility</p>
-                  <p>&#11185; Web & mobile app development</p>
-                  <p>&#11185; Digital marketing & SEO</p>
-                </div>
+            </div>
+            <div class="text-small text-secondary">
+              <div class="mb-1">&copy; Lee Ann's Portfolio. All rights reserved.</div>
             </div>
         </div>
-        <div class="col-md-6 d-flex">
-            <div class="card mb-2 h-100 d-flex flex-column" data-aos="fade-right" data-aos-delay="100">
-                <div class="card-header px-3 py-2">
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            <h3 class="h5 mb-1 mt-1">Technical Skills</h3>
-                            <div class="text-muted text-small">Proficiency Level: <small>Novice - Intermediate</small></div>
-                        </div>
-                        <img src="assets/services/ui-ux.svg" width="48" height="48" alt="ui-ux"/>
-                    </div>
-                </div>
-                <div class="card-body px-3 py-2">
-                    <p class="small-text">
-                      &#11185; <strong>Skilled in developing web and mobile applications</strong> using 
-                      <strong>HTML5, CSS3, Angular, PHP, SQL, OutSystems, WordPress</strong>, and 
-                      <strong>Wix</strong>, with strong familiarity in project tracking via 
-                      <strong>Jira</strong> and version control with <strong>Git</strong>.
-                    </p>
-                    <p class="small-text">&#11185; <strong>Experienced in SEO and digital marketing tools</strong> such as 
-                      <strong>Ahrefs, SEMrush, GMass</strong>, and project management using <strong>Monday.com</strong>.</p>
-                    <p class="small-text">&#11185; <strong>Skilled in development and productivity tools</strong>, including 
-                      <strong>VS Code, Microsoft 365, and Google Workspace</strong>.</p>
-                    <p class="small-text">&#11185; <strong>Adept in graphic design and presentation creation</strong>, excelling in 
-                      <strong>PowerPoint for dynamic presentations</strong>, <strong>Canva for business and branding design</strong>, 
-                      and <strong>Figma for UI/UX prototyping of web and mobile applications</strong>.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>
-</section>
-<section class="section px-2 px-lg-4 pt-5 mb-5" id="Portfolio">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center mt-5">Portfolio </h2>
-    </div>
-    <div class="grid bp-gallery pb-3" data-aos="zoom-in-up" data-aos-delay="100">
-      <div class="grid-sizer"></div>
-      <div class="grid-item"><a href="#">
-          <figure class="portfolio-item"><img src="assets/portfolio/1-small.png" data-bp="assets/portfolio/1.png"/>
-            <figcaption>
-              <h4 class="h5 mb-0">Mosquinator</h4>
-              <div>Capstone Project 1 & 2</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="#">
-          <figure class="portfolio-item"><img src="assets/portfolio/2-small.png" data-bp="assets/portfolio/2.png" data-caption="Example of an optional caption."/>
-            <figcaption> 
-              <h4 class="h5 mb-0">Math Quiz Game</h4>
-              <div>Applications Development and Emerging Technologies</div>                           
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="#">
-          <figure class="portfolio-item"><img src="assets/portfolio/3-small.png" data-bp="assets/portfolio/3.png" data-caption="Example of an optional caption."/>
-            <figcaption> 
-              <h4 class="h5 mb-0">Philippine HistoQuiz</h4>
-              <div>Mobile Programming</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="#">
-          <figure class="portfolio-item"><img src="assets/portfolio/4-small.png" data-bp="assets/portfolio/4.png"/>
-            <figcaption>
-              <h4 class="h5 mb-0">Linking Aid: EPDM Application (Emergency Preparedness and Disaster Mitigation)</h4>
-              <div>Platform Technologies</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="#">
-          <figure class="portfolio-item"><img src="assets/portfolio/5-small.png" data-bp="assets/portfolio/5.png"/>
-            <figcaption>
-              <h4 class="h5 mb-0">Jethy's Recipe App</h4>
-              <div>Advanced Mobile Programming</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="#">
-          <figure class="portfolio-item"><img src="assets/portfolio/6-small.png" data-bp="assets/portfolio/6.png"/>
-            <figcaption>
-              <h4 class="h5 mb-0">Kpop Merch</h4>
-              <div>Integrative Programming and Technologies</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="#">
-          <figure class="portfolio-item"><img src="assets/portfolio/7-small.png" data-bp="assets/portfolio/7.png"/>
-            <figcaption>
-              <h4 class="h5 mb-0">Ka Techy Facts - Tech Checks</h4>
-              <div>The Entrepreneurial Mind</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="#">
-          <figure class="portfolio-item"><img src="assets/portfolio/8-small.png" data-bp="assets/portfolio/8.png"/>
-            <figcaption>
-              <h4 class="h5 mb-0">Among Us</h4>
-              <div>Web Systems and Technologies</div>
-            </figcaption>
-          </figure>
-        </a></div>
-    </div>
-    <div class="mb-5 mt-2 text-center">
-    <a href="mailto:leeanndclo@gmail.com?subject=Request%20for%20Portfolio&body=Hi%20Lee%20Ann%2C%20I'm%20interested%20in%20viewing%20your%20UI%2FUX%20designs%2C%20graphics%2C%20and%20other%20projects." 
-       class="btn btn-primary shadow-sm mt-2 mb-3 hover-effect">
-      ✨ View More Projects (UI/UX, Graphics & More) <i class="fas fa-envelope ms-1"></i>
-    </a>
-  </div>
-  </div>
-</section>
-<section class="section px-3 px-lg-4 pt-5 mt-5" id="Capstone">
-  <div class="container-narrow">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">Capstone Project</h2>
-    </div>
-        <div class="card mb-3" data-aos="fade-left" data-aos-delay="200">
-          <div class="card-header px-3 py-2">
-            <div class="d-flex justify-content-between">
-              <div>
-                <h3 class="h5 mb-1">Capstone Project 1 and 2 (Thesis)</h3>
-                <div class="text-muted text-small">Mosquinator: A Community-Based Mobile and Web Application Framework for combating Dengue and providing Awareness for Residents of Pasig City</small></div>
-              </div><img src="assets/services/full-stack.svg" width="48" height="48" alt="full stack"/>
-            </div>
-          </div>
-          <div class="card-body px-3 py-2">
-            <p>
-              This study is about a community-oriented web and mobile application that will advocate a practical approach to providing a platform for reporting concerns and the exchange of information between the <strong>Pasig Dengue Task Force</strong> and the residents of <strong>Pasig City</strong> about dengue-related problems or incidents, as well as promoting awareness and knowledge regarding mosquito-borne diseases for the residents.
-            </p>
-            <p>
-              This project was developed by our team, <strong>Innovation Geeks</strong>, which consists of a four-member group of IT students specializing in <strong>Mobile and Web Applications</strong> under the guidance of <strong>Prof. Leonila B. Valdez</strong>, a faculty member of the College of Computing and Information Technologies at the <strong>National University Philippines - Manila (Main Campus)</strong>.
-            </p>            
-            
-            <p>Proponents of the Study</p>
-            
-            <p>&nbsp;&nbsp;• Project Manager: Robert Jay C. Cruz - cruzrc@students.national-u.edu.ph</p>
-            <p>&nbsp;&nbsp;• Documenter: Ralph Christian S. Cristobal - cristobalrs@students.national-u.edu.ph</p>
-            <p>&nbsp;&nbsp;• Systems Analyst & UI/UX Designer: Lee Ann D. Lo - lold@students.national-u.edu.ph</p>
-            <p>&nbsp;&nbsp;• Web and Mobile Programmer: Rene Victor A. San Juan Jr. - sanjuanra@students.national-u.edu.ph</p>
-
-            <p container text-center mt-5><a href="https://mosquinator.online/" class="btn btn-primary" target="_blank">🌐 Visit Mosquinator Website</a></p>
-            <p container text-center mt-5><a href="https://drive.google.com/file/d/19YoOjXzBr-Y76OQf0rON0pstQDwiqUzV/view?usp=sharing" class="btn btn-success" target="_blank">📱 Download Mosquinator Mobile App (APK)</a></p>
-            <p container text-center mt-5><a href="https://ieeexplore.ieee.org/abstract/document/10541723" class="btn btn-secondary">📖 Research Publication</a></p>
-          </div>
-        </div>
-  </div>
-</section>
-<footer class="pt-1 pb-1 text-center bg-light">
-  <div class="container">
-    <div class="my-2">
-      <strong>Lee Ann Lo</strong><br>
-      <strong>Creative Technologist</strong><br>
-      <span style="font-size: 0.95em;">(Design <span>&times;</span> Code <span>&times;</span> Strategy)</span>
-      <div class="social-nav">
-        <nav role="navigation">
-          <ul class="nav justify-content-center">
-            <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/leeanndclo" title="Facebook"><i class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://github.com/leeannlo" title="GitHub"><i class="fab fa-github"></i><span class="menu-title sr-only">GitHub</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/lee-ann-dc-lo/" title="LinkedIn"><i class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a></li>
-          </ul>
-        </nav>
       </div>
-      <div class="text-small text-secondary">
-        <div class="mb-1">&copy; Lee Ann's Portfolio. All rights reserved.</div>
-      </div>
-    </div>
-  </div>
-</footer></div>
-    </div>
-    <div id="scrolltop"><a class="btn btn-secondary" href="#home"><span class="icon"><i class="fas fa-angle-up fa-x"></i></span></a></div>
+    </footer>
+    
     <script src="./scripts/imagesloaded.pkgd.min.js?ver=1.2.0"></script>
     <script src="./scripts/masonry.pkgd.min.js?ver=1.2.0"></script>
     <script src="./scripts/BigPicture.min.js?ver=1.2.0"></script>
@@ -328,5 +332,68 @@
     <script src="./scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
     <script src="./scripts/aos.min.js?ver=1.2.0"></script>
     <script src="./scripts/main.js?ver=1.2.0"></script>
+    
+    <script>
+      // 1. Disable the browser's automatic scroll restoration
+      if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+      }
+
+      // 2. Force scroll to top on page load/refresh
+      window.addEventListener('load', () => {
+        window.scrollTo(0, 0);
+
+        // 3. Manually set the "Home" link as active
+        const homeLink = document.querySelector('.nav-link[href="#home"]');
+        if (homeLink) {
+          // Remove 'active' from all others
+          document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+          // Add to home
+          homeLink.classList.add('active');
+        }
+      });
+    </script>
+
+    <script>
+      window.addEventListener('load', function() {
+        var firstTabEl = document.querySelector('#header-nav .nav-link[href="#home"]');
+        var firstTab = new bootstrap.Tab(firstTabEl);
+        firstTab.show();
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('#header-nav .nav-link');
+        
+        navLinks.forEach(link => {
+          link.addEventListener('click', function (e) {
+            // 1. Prevent default jump (optional, if you want custom smooth control)
+            // e.preventDefault(); 
+
+            // 2. Remove 'active' from all links
+            navLinks.forEach(allLinks => allLinks.classList.remove('active'));
+            
+            // 3. Add 'active' to the one we just clicked
+            this.classList.add('active');
+
+            // 4. Manually scroll to the section (Fixes the "doesn't go there" issue)
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+              const headerOffset = 100; // Adjust this based on your navbar height
+              const elementPosition = targetElement.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
