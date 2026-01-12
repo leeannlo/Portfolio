@@ -224,10 +224,12 @@ footer a:not(.nav-link) {
 }
 
 .hover-effect {
+  color: #FFA69E;
   transition: transform .18s ease-in-out;
 }
 
 .hover-effect:hover {
+  color: #FFA69E;
   transform: translateY(-2px);
 }
 
