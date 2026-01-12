@@ -45,6 +45,9 @@ html {
   color: rgba(0, 0, 0, 0.8) !important;
 }
 
+.nav-link active {
+  color: #FF9899;
+}
 .social-nav {
   display: flex;
   justify-content: center; /* Centers the nav horizontally */
