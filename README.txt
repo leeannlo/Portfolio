@@ -1,5 +1,5 @@
-👩‍💻 Lee Ann Lo — Portfolio
-Mobile & Web Applications | UI/UX Design | Front-End Development
+👩‍💻 Lee Ann D. Lo — Portfolio
+Web Development | UI/UX Design | Graphic Design | Research & Development
 
 📍 Pasig City, Philippines
 🎓 Magna Cum Laude, BS in Information Technology – National University Manila
@@ -10,9 +10,9 @@ Hi! I’m Lee Ann Lo, an IT professional passionate about designing and developi
 
 🛠 Skills
 🧠 Core Expertise
-- UI/UX Design (Figma, Relume, Canva)
+- UI/UX Design (Figma)
+- Graphic Design and Brand Templates (Canva)
 - Front-End Development (HTML, CSS, JavaScript, TypeScript, Angular)
-- SEO Outreach (Ahrefs, GMass, SEMrush)
 - Technical Support & Content Moderation
 
 💻 Technical Stack
@@ -25,11 +25,6 @@ Junior Developer
 SM Supermalls – January 2025 – Present
 - Contributed to the revamp of tenant and resource management systems.
 - Assisted in enhancing system performance and document repository workflows.
-
-SEO Specialist
-QWERTYLabs Inc. – August 2024 – January 2025
-- Sourced high-authority backlinks (2000+ organic traffic, DR 40+).
-- Negotiated and secured partnerships for sponsored content across diverse niches.
 
 Front-End Web Developer Intern
 QuickReach, Inc. – May 2024 – June 2024
@@ -46,7 +41,7 @@ Innodata Inc. – June 2021 – January 2022
 - Evaluated tweet content and collaborated with QA for moderation accuracy.
 
 📱 Projects
-Mosquinator: A Dengue Awareness App
+Mosquinator: A community-based Dengue Awareness App
 UI/UX Designer | MEAN Stack + Flutter
 
 - A community-based app that provides real-time dengue alerts and educational resources for residents of Pasig City.
