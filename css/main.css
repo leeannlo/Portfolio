@@ -1,28 +1,22 @@
-html, body {
+/* Global */
+html,
+body {
   overflow-x: hidden;
 }
 
-/**
- * Enable smooth scrolling on the whole document
- */
 html {
   scroll-behavior: smooth;
 }
 
-/**
- * Disable smooth scrolling when users have prefers-reduced-motion enabled
- */
-@media screen and (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 }
 
-/**
- * Add .section to every anchored element for scroll margin
- */
 .section {
   scroll-margin-top: 2rem;
+  margin-bottom: 50px;
 }
 
 /* Header */
@@ -40,20 +34,26 @@ html {
 }
 
 .nav-link {
-  /*border-radius: 10px;*/
   font-weight: 700;
   color: rgba(0, 0, 0, 0.8) !important;
+  transition: color 0.3s ease;
 }
 
-.nav-link active {
-  color: #FF9899;
+.nav-link:hover {
+  color: #FF9899 !important;
 }
+
+#header-nav .nav-link.active {
+  color: #FF9899 !important;
+  font-weight: bold;
+}
+
+/* Social Nav */
 .social-nav {
   display: flex;
-  justify-content: center; /* Centers the nav horizontally */
-  align-items: center; /* Ensures vertical alignment */
-  text-align: center; /* Aligns inline elements */
-  margin-top: 20px; /* Optional: Adjust spacing */
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .social-nav .nav-link {
@@ -62,45 +62,16 @@ html {
   line-height: 2.5rem;
 }
 
-.nav-link:hover {
-  transition: color 0.3s ease; 
-  border-radius: 10px;
-  /*background-color: #FF9899;*/
-  color: #FF9899 !important;
-}
-
-.nav .container ul li.active {
-  /*border-radius: 10px;
-  background-color: #FF9899;*/
-  transition: 0.3s ease background-color;
-}
-.nav .container ul li.active a {
-  color: #FF9899 !important;
-}
-
-#header-nav .nav-link.active {
-    color: #FF9899 !important;
-}
-
-/* Hero (intro) section */
+/* Hero */
 .intro-title {
   font-weight: 800;
 }
 
-@-webkit-keyframes animateWave {
-  0% {
-    transform: scale(1, 0);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
 @keyframes animateWave {
-  0% {
+  from {
     transform: scale(1, 0);
   }
-  100% {
+  to {
     transform: scale(1, 1);
   }
 }
@@ -111,25 +82,21 @@ html {
   width: 100%;
   min-width: 600px;
   transform-origin: top;
-  -webkit-animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-          animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  background-image: url("../assets/wave-bg.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+  animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  background: url("../assets/wave-bg.svg") center no-repeat;
 }
 
 img.avatar {
   border-radius: 30px;
 }
 
-/* Masonary grid for portfolio */
-.grid:after {
-  content: '';
+/* Masonry Grid */
+.grid::after {
+  content: "";
   display: block;
   clear: both;
 }
 
-/* Grid Item */
 .grid-sizer,
 .grid-item {
   width: 100%;
@@ -144,6 +111,7 @@ img.avatar {
   .grid-item {
     width: 25%;
   }
+
   .grid-item {
     float: left;
     padding: 6px;
@@ -153,11 +121,10 @@ img.avatar {
 .grid-item img {
   display: block;
   width: 100%;
-  max-width: 100%;
 }
 
 /* Portfolio */
-.portolio-section .container {
+.portfolio-section .container {
   padding: 0;
 }
 
@@ -165,58 +132,45 @@ img.avatar {
   position: relative;
   overflow: hidden;
   text-align: center;
-  margin: 0;
 }
 
 .portfolio-item figcaption {
   position: absolute;
-  top: auto;
   bottom: 0;
-  left: 0;
   width: 100%;
   padding: 12px;
   background: rgba(255, 255, 255, 0.75);
+  transform: translateY(100%);
   transition: transform 0.35s;
-  transform: translate3d(0, 100%, 0);
-}
-
-.portfolio-item figcaption h4 {
-  color: #222;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 3px;
-}
-
-.portfolio-item figcaption p {
-  color: #444;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 0;
 }
 
 .portfolio-item:hover figcaption {
-  transform: translate3d(0, 0, 0);
+  transform: translateY(0);
 }
 
-/* Portolio Caption */
-#bp_container .bp-xc {
-  background: #F6E05E !important;
+.portfolio-item figcaption h4 {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+  color: #222;
 }
 
-#bp_caption a {
-  text-decoration: none;
+.portfolio-item figcaption p {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  color: #444;
 }
 
-/* Footer section */
+/* Footer */
 footer a:not(.nav-link) {
   color: inherit;
   font-weight: 600;
   text-decoration: none;
-  cursor: pointer;
 }
 
-/* Additional utility styles */
+/* Utilities */
 .container-narrow {
   max-width: 1024px;
   margin: 0 auto;
@@ -232,95 +186,68 @@ footer a:not(.nav-link) {
 
 .hover-effect {
   color: #FFA69E;
-  transition: transform .18s ease-in-out;
+  transition: transform 0.18s ease-in-out;
 }
 
 .hover-effect:hover {
-  color: #FFA69E;
   transform: translateY(-2px);
 }
 
+/* Marker */
 .marker {
   position: relative;
-  display: inline;
-  width: auto;
+  display: inline-block;
 }
 
-.marker-center {
-  padding-right: 0;
-}
-
-.marker:after {
+.marker::after {
   content: "";
   width: 125px;
   height: 30px;
   position: absolute;
   bottom: -25px;
   right: -30px;
-  background-image: url("../assets/marker.svg");
-  background-repeat: no-repeat;
+  background: url("../assets/marker.svg") no-repeat;
 }
 
-.marker-center:after {
-  bottom: -30px;
+.marker-center::after {
   left: 50%;
   margin-left: -60px;
 }
 
 @media (max-width: 575.98px) {
-  .marker {
-    padding-right: 0;
-  }
-  .marker:after {
+  .marker::after {
     bottom: -30px;
     left: 50%;
     margin-left: -60px;
   }
 }
 
-.entry-title a {
-  text-decoration: none;
-}
-
+/* Buttons */
 .btn-custom-color {
   background-color: #FF9899;
   border-color: #FF9899;
-  color: #FF9899 !important;; /* Set text color to white or another suitable color for better contrast */
+  color: #fff !important;
 }
 
 .btn-custom-color:hover {
-  background-color: #FF9899;
-  border-color: #FFA69E 2px;
-  color: #FFA69E; /* Set text color to white or another suitable color for better contrast */
+  background-color: #FFA69E;
+  border-color: #FFA69E;
 }
 
+/* Layout helpers */
 .small-text {
-  font-size: 90%; /* Adjust the percentage as needed */
+  font-size: 90%;
 }
 
 .row-margin {
-  margin-bottom: 20px; /* Adjust the margin value as needed */
+  margin-bottom: 20px;
 }
 
-.section {
-  margin-bottom: 50px;
-}
-
+/* Sections */
 #skills {
-  padding-top: 3rem; /* Adjust this value to increase or decrease top padding */
-  padding-bottom: 1rem; /* Adjust this value to increase or decrease bottom padding */
+  padding: 3rem 0 1rem;
 }
 
 #portfolio {
-  padding-top: 1rem; /* Adjust this value to decrease top padding */
-  padding-bottom: 1rem; /* Adjust this value to decrease bottom padding */
+  padding: 1rem 0;
 }
-
-
-#header-nav .nav-link.active {
-    color: #FF9899!important;
-    font-weight: bold;
-    /* border-bottom: 2px solid #0d6efd; */
-}
-
-
