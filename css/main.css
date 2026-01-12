@@ -59,24 +59,10 @@ html {
   line-height: 2.5rem;
 }
 
-/* Add this to your <style> tag or CSS file */
-#header-nav .nav-link.active {
-    color: #ff9899 !important; /* Bootstrap Primary Blue */
-    font-weight: bold;
-    /*border-bottom: 2px solid #0d6efd;*/
-}
-
-/* Highlights the active link */
-.navbar-nav .nav-link.active {
-    /*color: #212529 !important; Change to your brand color */
-    font-weight: 700;
-    /*border-bottom: 2px solid #ff9899; /* Optional: adds an underline */
-}
-
 .nav-link:hover {
   transition: color 0.3s ease; 
   border-radius: 10px;
-  background-color: #FF9899;
+  /*background-color: #FF9899;*/
   color: #fff !important;
 }
 
