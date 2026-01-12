@@ -185,7 +185,7 @@ footer a:not(.nav-link) {
 }
 
 .hover-effect {
-  color: #FFA69E;
+  color: #fff;
   transition: transform 0.18s ease-in-out;
 }
 
