@@ -278,11 +278,11 @@ footer a:not(.nav-link) {
 .btn-custom-color {
   background-color: #FF9899;
   border-color: #FF9899;
-  color: #fff; /* Set text color to white or another suitable color for better contrast */
+  color: #FF9899 !important;; /* Set text color to white or another suitable color for better contrast */
 }
 
 .btn-custom-color:hover {
-  background-color: #fff;
+  background-color: #FF9899;
   border-color: #FFA69E 2px;
   color: #FFA69E; /* Set text color to white or another suitable color for better contrast */
 }
