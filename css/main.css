@@ -63,7 +63,7 @@ html {
   transition: color 0.3s ease; 
   border-radius: 10px;
   /*background-color: #FF9899;*/
-  color: #fff !important;
+  color: #FF9899 !important;
 }
 
 nav .container ul li.active {
@@ -72,7 +72,7 @@ nav .container ul li.active {
   transition: 0.3s ease background-color;
 }
 nav .container ul li.active a {
-  color: #fff !important;
+  color: #FF9899 !important;
 }
 
 /* Hero (intro) section */
