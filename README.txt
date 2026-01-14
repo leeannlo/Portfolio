@@ -18,7 +18,7 @@ Hi! I’m Lee Ann Lo, an IT professional passionate about designing and developi
 💻 Technical Stack
 Languages: JavaScript, TypeScript, HTML, CSS, PHP, SQL
 Frameworks: Angular, Node.js, Express.js, Flutter
-Tools: VS Code, Jira, Monday.com, Microsoft 365, Google Workspace, OutSystems
+Tools: VS Code, Jira, Monday.com, Microsoft 365, MySQL, XAMPP, Google Workspace, OutSystems
 
 💼 Experience
 Junior Developer
