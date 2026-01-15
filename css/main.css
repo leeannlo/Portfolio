@@ -14,24 +14,14 @@ html {
   }
 }
 
-/*.section {
-  scroll-margin-top: 2rem;
-  margin-bottom: 50px;
-}*/
-
-.section { scroll-margin-top: 100px; }
-
-/* Make ScrollSpy respect navbar height */
+/* Sections (ONE source of truth)
+   Match this with: body data-bs-offset="90"
+*/
 .section {
-  scroll-margin-top: 90px; /* match or slightly exceed navbar height */
-}
-
-/* Add consistent vertical breathing space between sections */
-.section {
+  scroll-margin-top: 90px; /* navbar height / ScrollSpy offset */
   padding-top: 80px;
   padding-bottom: 80px;
 }
-
 
 /* Header */
 .site-title {
@@ -59,7 +49,7 @@ html {
 
 #header-nav .nav-link.active {
   color: #FF9899 !important;
-  font-weight: bold;
+  font-weight: 700; /* keep consistent */
 }
 
 /* Social Nav */
@@ -82,12 +72,8 @@ html {
 }
 
 @keyframes animateWave {
-  from {
-    transform: scale(1, 0);
-  }
-  to {
-    transform: scale(1, 1);
-  }
+  from { transform: scale(1, 0); }
+  to { transform: scale(1, 1); }
 }
 
 .wave-bg {
@@ -258,10 +244,10 @@ footer a:not(.nav-link) {
 }
 
 /* Sections */
-#skills {
+#Skills {
   padding: 3rem 0 1rem;
 }
 
-#portfolio {
+#Portfolio {
   padding: 1rem 0;
 }
