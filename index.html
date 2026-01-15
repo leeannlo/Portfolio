@@ -419,6 +419,47 @@
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
+              const targetId = this.getAttribute('href');
+              const targetElement = document.querySelector(targetId);
+              
+              if (targetElement) {
+                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const elementHeight = targetElement.offsetHeight;
+                const viewportHeight = window.innerHeight;
+              
+                // Compute scroll position so section is centered
+                const scrollToPosition =
+                  elementTop - (viewportHeight / 2) + (elementHeight / 2) - (navbarHeight / 2);
+              
+                window.scrollTo({
+                  top: scrollToPosition,
+                  behavior: 'smooth'
+                });
+              }
+    </script>
+
+    
+    <!--<script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('#header-nav .nav-link');
+        
+        navLinks.forEach(link => {
+          link.addEventListener('click', function (e) {
+            // 1. Prevent default jump (optional, if you want custom smooth control)
+            // e.preventDefault(); 
+
+            // 2. Remove 'active' from all links
+            navLinks.forEach(allLinks => allLinks.classList.remove('active'));
+            
+            // 3. Add 'active' to the one we just clicked
+            this.classList.add('active');
+
+            // 4. Manually scroll to the section (Fixes the "doesn't go there" issue)
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
               const headerOffset = 100; // Adjust this based on your navbar height
               const elementPosition = targetElement.getBoundingClientRect().top;
               const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -431,6 +472,6 @@
           });
         });
       });
-    </script>
+    </script>-->
   </body>
 </html>
