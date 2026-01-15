@@ -19,6 +19,8 @@ html {
   margin-bottom: 50px;
 }*/
 
+.section { scroll-margin-top: 100px; }
+
 /* Make ScrollSpy respect navbar height */
 .section {
   scroll-margin-top: 90px; /* match or slightly exceed navbar height */
