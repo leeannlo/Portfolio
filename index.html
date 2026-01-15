@@ -369,109 +369,75 @@
     <script src="./scripts/purecounter.min.js?ver=1.2.0"></script>
     <script src="./scripts/aos.min.js?ver=1.2.0"></script>
     <script src="./scripts/main.js?ver=1.2.0"></script>
-    
-    <script>
-      // 1. Disable the browser's automatic scroll restoration
-      if (history.scrollRestoration) {
-        history.scrollRestoration = 'manual';
-      }
-
-      // 2. Force scroll to top on page load/refresh
-      window.addEventListener('load', () => {
-        window.scrollTo(0, 0);
-
-        // 3. Manually set the "Home" link as active
-        const homeLink = document.querySelector('.nav-link[href="#home"]');
-        if (homeLink) {
-          // Remove 'active' from all others
-          document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-          // Add to home
-          homeLink.classList.add('active');
-        }
-      });
-    </script>
-
-    <script>
-      window.addEventListener('load', function() {
-        var firstTabEl = document.querySelector('#header-nav .nav-link[href="#home"]');
-        var firstTab = new bootstrap.Tab(firstTabEl);
-        firstTab.show();
-      });
-    </script>
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
+        const nav = document.querySelector('#header-nav');
         const navLinks = document.querySelectorAll('#header-nav .nav-link');
-        
+      
+        // Ensure Home active on first load
+        const homeLink = document.querySelector('#header-nav .nav-link[href="#home"]');
+        if (homeLink) homeLink.classList.add('active');
+      
+        // Scroll function:
+        // About Me → center screen
+        // Others → top under navbar
+        const scrollToSection = (targetElement, center = false) => {
+          const navbarHeight = nav ? nav.offsetHeight : 0;
+          const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          let scrollToPosition;
+      
+          if (center) {
+            const elementHeight = targetElement.offsetHeight;
+            const viewportHeight = window.innerHeight;
+            scrollToPosition =
+              elementTop - (viewportHeight / 2) + (elementHeight / 2) - (navbarHeight / 2);
+          } else {
+            scrollToPosition = elementTop - navbarHeight - 10;
+          }
+      
+          window.scrollTo({
+            top: Math.max(0, scrollToPosition),
+            behavior: 'smooth'
+          });
+        };
+      
+        // Click handling
         navLinks.forEach(link => {
           link.addEventListener('click', function (e) {
-            // 1. Prevent default jump (optional, if you want custom smooth control)
-            // e.preventDefault(); 
-
-            // 2. Remove 'active' from all links
-            navLinks.forEach(allLinks => allLinks.classList.remove('active'));
-            
-            // 3. Add 'active' to the one we just clicked
-            this.classList.add('active');
-
-            // 4. Manually scroll to the section (Fixes the "doesn't go there" issue)
             const targetId = this.getAttribute('href');
+            if (!targetId || !targetId.startsWith('#')) return;
+      
             const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-              const targetId = this.getAttribute('href');
-              const targetElement = document.querySelector(targetId);
-              
-              if (targetElement) {
-                const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                const elementHeight = targetElement.offsetHeight;
-                const viewportHeight = window.innerHeight;
-              
-                // Compute scroll position so section is centered
-                const scrollToPosition =
-                  elementTop - (viewportHeight / 2) + (elementHeight / 2) - (navbarHeight / 2);
-              
-                window.scrollTo({
-                  top: scrollToPosition,
-                  behavior: 'smooth'
-                });
-              }
-    </script>
-
-    
-    <!--<script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const navLinks = document.querySelectorAll('#header-nav .nav-link');
-        
-        navLinks.forEach(link => {
-          link.addEventListener('click', function (e) {
-            // 1. Prevent default jump (optional, if you want custom smooth control)
-            // e.preventDefault(); 
-
-            // 2. Remove 'active' from all links
-            navLinks.forEach(allLinks => allLinks.classList.remove('active'));
-            
-            // 3. Add 'active' to the one we just clicked
+            if (!targetElement) return;
+      
+            e.preventDefault();
+      
+            // Remove active manually (ScrollSpy will reapply correctly)
+            navLinks.forEach(l => l.classList.remove('active'));
             this.classList.add('active');
-
-            // 4. Manually scroll to the section (Fixes the "doesn't go there" issue)
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-              const headerOffset = 100; // Adjust this based on your navbar height
-              const elementPosition = targetElement.getBoundingClientRect().top;
-              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-              });
+      
+            // Collapse mobile navbar after click
+            const navbarCollapse = document.querySelector('#navbarSupportedContent');
+            if (navbarCollapse.classList.contains('show')) {
+              new bootstrap.Collapse(navbarCollapse).hide();
             }
+      
+            // Only About Me gets centered
+            const shouldCenter = targetId === "#About_Me";
+            scrollToSection(targetElement, shouldCenter);
+      
+            // Update URL hash
+            history.replaceState(null, '', targetId);
           });
         });
+      
+        // Force top on reload
+        if (history.scrollRestoration) {
+          history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
       });
-    </script>-->
+    </script>
   </body>
 </html>
