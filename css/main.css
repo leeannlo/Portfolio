@@ -14,10 +14,22 @@ html {
   }
 }
 
-.section {
+/*.section {
   scroll-margin-top: 2rem;
   margin-bottom: 50px;
+}*/
+
+/* Make ScrollSpy respect navbar height */
+.section {
+  scroll-margin-top: 90px; /* match or slightly exceed navbar height */
 }
+
+/* Add consistent vertical breathing space between sections */
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
 
 /* Header */
 .site-title {
