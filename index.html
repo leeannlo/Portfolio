@@ -517,86 +517,148 @@
           <script src="./scripts/purecounter.min.js?ver=1.2.0"></script>
           <script src="./scripts/aos.min.js?ver=1.2.0"></script>
           <script src="./scripts/main.js?ver=1.2.0"></script>
-
+          
           <script>
             document.addEventListener('DOMContentLoaded', function () {
               const nav = document.querySelector('#header-nav');
               const navLinks = document.querySelectorAll('#header-nav .nav-link');
-            
-              // Ensure Home active on first load
-              const homeLink = document.querySelector('#header-nav .nav-link[href="#home"]');
-              if (homeLink) homeLink.classList.add('active');
-            
+          
+              // Sections included in the navbar
+              const sections = Array.from(navLinks)
+                .map(link => document.querySelector(link.getAttribute('href')))
+                .filter(Boolean);
+          
+              // Track the section currently visible on screen
+              let currentSectionId = '';
+          
+              function updateActiveSection() {
+                const navbarHeight = nav ? nav.offsetHeight : 0;
+                const scrollPosition = window.scrollY + navbarHeight + 30;
+          
+                let currentSection = sections[0];
+          
+                sections.forEach(section => {
+                  if (section.offsetTop <= scrollPosition) {
+                    currentSection = section;
+                  }
+                });
+          
+                if (!currentSection) return;
+          
+                const currentId = '#' + currentSection.id;
+          
+                // Update active navbar link
+                navLinks.forEach(link => {
+                  link.classList.toggle(
+                    'active',
+                    link.getAttribute('href') === currentId
+                  );
+                });
+          
+                // Update URL hash without page reload
+                if (window.location.hash !== currentId) {
+                  history.replaceState(null, '', currentId);
+                }
+          
+                currentSectionId = currentId;
+              }
+          
               // Scroll function:
               // About Me → center screen
               // Others → top under navbar
               const scrollToSection = (targetElement, center = false) => {
                 const navbarHeight = nav ? nav.offsetHeight : 0;
-                const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const elementTop =
+                  targetElement.getBoundingClientRect().top + window.pageYOffset;
+          
                 let scrollToPosition;
-            
+          
                 if (center) {
                   const elementHeight = targetElement.offsetHeight;
                   const viewportHeight = window.innerHeight;
+          
                   scrollToPosition =
-                    elementTop - (viewportHeight / 2) + (elementHeight / 2) - (navbarHeight / 2);
+                    elementTop -
+                    (viewportHeight / 2) +
+                    (elementHeight / 2) -
+                    (navbarHeight / 2);
                 } else {
                   scrollToPosition = elementTop - navbarHeight - 10;
                 }
-            
+          
                 window.scrollTo({
                   top: Math.max(0, scrollToPosition),
                   behavior: 'smooth'
                 });
               };
-            
-              // Click handling
+          
+              // Navbar click handling
               navLinks.forEach(link => {
                 link.addEventListener('click', function (e) {
                   const targetId = this.getAttribute('href');
+          
                   if (!targetId || !targetId.startsWith('#')) return;
-            
+          
                   const targetElement = document.querySelector(targetId);
+          
                   if (!targetElement) return;
-            
+          
                   e.preventDefault();
-            
-                  // Remove active manually (ScrollSpy will reapply correctly)
+          
+                  // Update active link immediately
                   navLinks.forEach(l => l.classList.remove('active'));
                   this.classList.add('active');
-            
+          
                   // Collapse mobile navbar after click
-                  const navbarCollapse = document.querySelector('#navbarSupportedContent');
+                  const navbarCollapse =
+                    document.querySelector('#navbarSupportedContent');
+          
                   if (navbarCollapse.classList.contains('show')) {
                     new bootstrap.Collapse(navbarCollapse).hide();
                   }
-            
+          
                   // Only About Me gets centered
-                  const shouldCenter = targetId === "#About_Me";
+                  const shouldCenter = targetId === '#About_Me';
+          
                   scrollToSection(targetElement, shouldCenter);
-            
-                  // Update URL hash
+          
+                  // Update URL hash immediately
                   history.replaceState(null, '', targetId);
                 });
               });
-            
+          
+              // Update active section and URL while scrolling
+              window.addEventListener('scroll', updateActiveSection, {
+                passive: true
+              });
+          
               // Force top on reload
               if (history.scrollRestoration) {
                 history.scrollRestoration = 'manual';
               }
+          
               window.scrollTo(0, 0);
+          
+              // Initialize active section
+              updateActiveSection();
             });
           </script>
-
+          
           <script>
             document.addEventListener('DOMContentLoaded', function () {
               document.querySelectorAll('.project-lightbox-link').forEach(function (link) {
                 link.addEventListener('click', function (e) {
                   const image = this.querySelector('img[data-bp]');
+          
                   if (!image) return;
+          
                   if (typeof BigPicture === 'function') {
                     e.preventDefault();
-                    BigPicture({ el: image, gallery: '.bp-gallery' });
+          
+                    BigPicture({
+                      el: image,
+                      gallery: '.bp-gallery'
+                    });
                   }
                 });
               });
