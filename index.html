@@ -267,63 +267,63 @@
           
             </div>
           </section>
-          <section class="section px-2 px-lg-4 pt-3 mb-5" id="#Portfolio">
+          <section class="section px-2 px-lg-4 pt-3 mb-5" id="Portfolio">
             <div class="container">
               <div class="text-center mb-5">
                 <h2 class="marker marker-center mt-5">Selected Projects</h2>
               </div>
               <div class="grid bp-gallery pb-3" data-aos="zoom-in-up" data-aos-delay="100">
                 <div class="grid-sizer"></div>
-                <div class="grid-item"><a href="#">
+                <div class="grid-item"><a href="assets/portfolio/1.png" class="project-lightbox-link">
                     <figure class="portfolio-item"><img src="assets/portfolio/1-small.png" data-bp="assets/portfolio/1.png"/>
                       <figcaption>
                         <h4 class="h5 mb-0">Mosquinator</h4>
                         <div>Capstone Project 1 & 2</div>
                       </figcaption>
                     </figure></a></div>
-                <div class="grid-item"><a href="#">
+                <div class="grid-item"><a href="assets/portfolio/2.png" class="project-lightbox-link">
                     <figure class="portfolio-item"><img src="assets/portfolio/2-small.png" data-bp="assets/portfolio/2.png" data-caption="Example of an optional caption."/>
                       <figcaption> 
                         <h4 class="h5 mb-0">Math Quiz Game</h4>
                         <div>Applications Development and Emerging Technologies</div>                           
                       </figcaption>
                     </figure></a></div>
-                <div class="grid-item"><a href="#">
+                <div class="grid-item"><a href="assets/portfolio/3.png" class="project-lightbox-link">
                     <figure class="portfolio-item"><img src="assets/portfolio/3-small.png" data-bp="assets/portfolio/3.png" data-caption="Example of an optional caption."/>
                       <figcaption> 
                         <h4 class="h5 mb-0">Philippine HistoQuiz</h4>
                         <div>Mobile Programming</div>
                       </figcaption>
                     </figure></a></div>
-                <div class="grid-item"><a href="#">
+                <div class="grid-item"><a href="assets/portfolio/4.png" class="project-lightbox-link">
                     <figure class="portfolio-item"><img src="assets/portfolio/4-small.png" data-bp="assets/portfolio/4.png"/>
                       <figcaption>
                         <h4 class="h5 mb-0">Linking Aid: EPDM Application (Emergency Preparedness and Disaster Mitigation)</h4>
                         <div>Platform Technologies</div>
                       </figcaption>
                     </figure></a></div>
-                <div class="grid-item"><a href="#">
+                <div class="grid-item"><a href="assets/portfolio/5.png" class="project-lightbox-link">
                     <figure class="portfolio-item"><img src="assets/portfolio/5-small.png" data-bp="assets/portfolio/5.png"/>
                       <figcaption>
                         <h4 class="h5 mb-0">Jethy's Recipe App</h4>
                         <div>Advanced Mobile Programming</div>
                       </figcaption>
                     </figure></a></div>
-                <div class="grid-item"><a href="#">
+                <div class="grid-item"><a href="assets/portfolio/6.png" class="project-lightbox-link">
                     <figure class="portfolio-item"><img src="assets/portfolio/6-small.png" data-bp="assets/portfolio/6.png"/>
                       <figcaption>
                         <h4 class="h5 mb-0">Kpop Merch</h4>
                         <div>Integrative Programming and Technologies</div>
                       </figcaption>
                     </figure></a></div>
-                <div class="grid-item"><a href="#">
+                <div class="grid-item"><a href="assets/portfolio/7.png" class="project-lightbox-link">
                     <figure class="portfolio-item"><img src="assets/portfolio/7-small.png" data-bp="assets/portfolio/7.png"/>
                       <figcaption>
                         <h4 class="h5 mb-0">Ka Techy Facts - Tech Checks</h4>
                         <div>The Entrepreneurial Mind</div>
                       </figcaption>
                     </figure></a></div>
-                <div class="grid-item"><a href="#">
+                <div class="grid-item"><a href="assets/portfolio/8.png" class="project-lightbox-link">
                     <figure class="portfolio-item"><img src="assets/portfolio/8-small.png" data-bp="assets/portfolio/8.png"/>
                       <figcaption>
                         <h4 class="h5 mb-0">Among Us</h4>
@@ -481,6 +481,21 @@
           history.scrollRestoration = 'manual';
         }
         window.scrollTo(0, 0);
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.project-lightbox-link').forEach(function (link) {
+          link.addEventListener('click', function (e) {
+            const image = this.querySelector('img[data-bp]');
+            if (!image) return;
+            if (typeof BigPicture === 'function') {
+              e.preventDefault();
+              BigPicture({ el: image, gallery: '.bp-gallery' });
+            }
+          });
+        });
       });
     </script>
   </body>
