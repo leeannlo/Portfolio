@@ -391,14 +391,22 @@ img.avatar {
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(23, 63, 59, 0.08);
   border-radius: 10px;
-  background-image: url("../assets/procurement-materials-grid.png");
-  background-repeat: no-repeat;
-  background-size: 300% 300%;
+  background: #f3f5f4;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Actual image inside each card */
+#Portfolio .procurement-thumbnail {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.35s ease;
 }
 
 /* =========================================================
@@ -423,6 +431,7 @@ img.avatar {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.02) 10%,
@@ -439,17 +448,17 @@ img.avatar {
 #Portfolio .procurement-overlay {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 20px;
   color: #fff;
 }
 
 #Portfolio .procurement-overlay h4 {
   max-width: 90%;
-  margin: 0;
+  margin: 0 0 10px;
   color: #fff;
   font-size: 1.05rem;
   font-weight: 700;
@@ -465,6 +474,9 @@ img.avatar {
   align-items: center;
   gap: 5px;
   line-height: 1;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 #Portfolio .view-content-icon {
@@ -505,6 +517,10 @@ img.avatar {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   text-decoration: none;
+}
+
+#Portfolio .procurement-card:hover .procurement-thumbnail {
+  transform: scale(1.04);
 }
 
 #Portfolio .procurement-card:hover::before {
