@@ -461,23 +461,18 @@ img.avatar {
    ========================================================= */
 
 #Portfolio .view-content {
-  align-self: flex-start;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 7px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.96);
-  color: #173f3b;
-  font-size: 0.78rem;
-  font-weight: 600;
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.12);
-  transition: transform 0.2s ease, background 0.2s ease;
+  gap: 5px;
+  line-height: 1;
 }
 
-#Portfolio .view-content span {
-  font-size: 0.95rem;
-  line-height: 1;
+#Portfolio .view-content-icon {
+  width: 1em;
+  height: 1em;
+  flex: 0 0 1em;
+  display: block;
+  color: currentColor;
 }
 
 /* =========================================================
