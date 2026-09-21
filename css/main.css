@@ -2,6 +2,14 @@
    GLOBAL
    ========================================================= */
 
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 90px;
+}
+
 html,
 body {
   overflow-x: hidden;
