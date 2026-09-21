@@ -498,9 +498,9 @@ img.avatar {
 }
 
 #Portfolio .view-icon {
-  width: 1em;
-  height: 1em;
-  flex: 0 0 1em;
+  width: 0.85em;
+  height: 0.85em;
+  flex: 0 0 0.85em;
   display: block;
   color: currentColor;
 }
