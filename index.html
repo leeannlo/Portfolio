@@ -1138,88 +1138,243 @@
           <script src="./scripts/main.js?ver=1.2.0"></script>
 
           <script>
-            document.addEventListener('DOMContentLoaded', function () {
-              const nav = document.querySelector('#header-nav');
-              const navLinks = document.querySelectorAll('#header-nav .nav-link');
-            
-              // Ensure Home active on first load
-              const homeLink = document.querySelector('#header-nav .nav-link[href="#home"]');
-              if (homeLink) homeLink.classList.add('active');
-            
-              // Scroll function:
-              // About Me → center screen
-              // Others → top under navbar
-              const scrollToSection = (targetElement, center = false) => {
-                const navbarHeight = nav ? nav.offsetHeight : 0;
-                const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                let scrollToPosition;
-            
-                if (center) {
-                  const elementHeight = targetElement.offsetHeight;
-                  const viewportHeight = window.innerHeight;
-                  scrollToPosition =
-                    elementTop - (viewportHeight / 2) + (elementHeight / 2) - (navbarHeight / 2);
-                } else {
-                  scrollToPosition = elementTop - navbarHeight - 10;
+              document.addEventListener('DOMContentLoaded', function () {
+              
+                const nav = document.querySelector('#header-nav');
+                const navLinks = document.querySelectorAll('#header-nav .nav-link');
+                const navbarCollapse = document.querySelector('#navbarSupportedContent');
+              
+                /*
+                 * -----------------------------------------
+                 * SCROLL TO SECTION
+                 * -----------------------------------------
+                 */
+                function scrollToSection(targetElement, center = false) {
+              
+                  const navbarHeight = nav ? nav.offsetHeight : 0;
+                  const elementTop =
+                    targetElement.getBoundingClientRect().top + window.pageYOffset;
+              
+                  let scrollToPosition;
+              
+                  if (center) {
+              
+                    const elementHeight = targetElement.offsetHeight;
+                    const viewportHeight = window.innerHeight;
+              
+                    scrollToPosition =
+                      elementTop
+                      - (viewportHeight / 2)
+                      + (elementHeight / 2)
+                      - (navbarHeight / 2);
+              
+                  } else {
+              
+                    scrollToPosition =
+                      elementTop - navbarHeight - 10;
+              
+                  }
+              
+                  window.scrollTo({
+                    top: Math.max(0, scrollToPosition),
+                    behavior: 'smooth'
+                  });
                 }
-            
-                window.scrollTo({
-                  top: Math.max(0, scrollToPosition),
-                  behavior: 'smooth'
-                });
-              };
-            
-              // Click handling
-              navLinks.forEach(link => {
-                link.addEventListener('click', function (e) {
-                  const targetId = this.getAttribute('href');
-                  if (!targetId || !targetId.startsWith('#')) return;
-            
-                  const targetElement = document.querySelector(targetId);
-                  if (!targetElement) return;
-            
-                  e.preventDefault();
-            
-                  // Remove active manually (ScrollSpy will reapply correctly)
-                  navLinks.forEach(l => l.classList.remove('active'));
-                  this.classList.add('active');
-            
-                  // Collapse mobile navbar after click
-                  const navbarCollapse = document.querySelector('#navbarSupportedContent');
-                  if (navbarCollapse.classList.contains('show')) {
-                    new bootstrap.Collapse(navbarCollapse).hide();
-                  }
-            
-                  // Only About Me gets centered
-                  const shouldCenter = targetId === "#About_Me";
-                  scrollToSection(targetElement, shouldCenter);
-            
-                  // Update URL hash
-                  history.replaceState(null, '', targetId);
-                });
-              });
-            
-              // Force top on reload
-              if (history.scrollRestoration) {
-                history.scrollRestoration = 'manual';
-              }
-              window.scrollTo(0, 0);
-            });
-          </script>
-
-          <script>
-            document.addEventListener('DOMContentLoaded', function () {
-              document.querySelectorAll('.project-lightbox-link').forEach(function (link) {
-                link.addEventListener('click', function (e) {
-                  const image = this.querySelector('img[data-bp]');
-                  if (!image) return;
-                  if (typeof BigPicture === 'function') {
+              
+              
+                /*
+                 * -----------------------------------------
+                 * NAVBAR CLICK
+                 * -----------------------------------------
+                 */
+                navLinks.forEach(link => {
+              
+                  link.addEventListener('click', function (e) {
+              
+                    const targetId = this.getAttribute('href');
+              
+                    if (!targetId || !targetId.startsWith('#')) {
+                      return;
+                    }
+              
+                    const targetElement = document.querySelector(targetId);
+              
+                    if (!targetElement) {
+                      return;
+                    }
+              
                     e.preventDefault();
-                    BigPicture({ el: image, gallery: '.bp-gallery' });
-                  }
+              
+                    /*
+                     * Update active state immediately
+                     */
+                    navLinks.forEach(item => {
+                      item.classList.remove('active');
+                    });
+              
+                    this.classList.add('active');
+              
+              
+                    /*
+                     * Close mobile navbar
+                     */
+                    if (
+                      navbarCollapse &&
+                      navbarCollapse.classList.contains('show')
+                    ) {
+                      bootstrap.Collapse
+                        .getOrCreateInstance(navbarCollapse)
+                        .hide();
+                    }
+              
+              
+                    /*
+                     * About Me = centered
+                     * Everything else = navbar offset
+                     */
+                    const shouldCenter = targetId === '#About_Me';
+              
+                    scrollToSection(targetElement, shouldCenter);
+              
+              
+                    /*
+                     * UPDATE URL
+                     *
+                     * This changes:
+                     * example.com/
+                     *
+                     * into:
+                     * example.com/#Portfolio
+                     */
+                    history.replaceState(
+                      null,
+                      '',
+                      targetId
+                    );
+              
+                  });
+              
                 });
+              
+              
+                /*
+                 * -----------------------------------------
+                 * UPDATE URL WHEN SCROLLING
+                 * -----------------------------------------
+                 *
+                 * Bootstrap ScrollSpy changes the active
+                 * navbar item, but does NOT automatically
+                 * change the URL.
+                 *
+                 * This observer keeps them synchronized.
+                 */
+                const sections = Array.from(navLinks)
+                  .map(link => {
+                    const id = link.getAttribute('href');
+              
+                    if (!id || !id.startsWith('#')) {
+                      return null;
+                    }
+              
+                    return document.querySelector(id);
+                  })
+                  .filter(Boolean);
+              
+              
+                const observer = new IntersectionObserver(
+                  entries => {
+              
+                    /*
+                     * Find sections currently visible
+                     */
+                    const visibleSections = entries
+                      .filter(entry => entry.isIntersecting)
+                      .sort(
+                        (a, b) =>
+                          a.boundingClientRect.top -
+                          b.boundingClientRect.top
+                      );
+              
+                    if (!visibleSections.length) {
+                      return;
+                    }
+              
+                    const activeSection = visibleSections[0];
+                    const activeId = '#' + activeSection.target.id;
+              
+                    /*
+                     * Find corresponding navbar link
+                     */
+                    const activeLink = document.querySelector(
+                      `#header-nav .nav-link[href="${activeId}"]`
+                    );
+              
+                    if (!activeLink) {
+                      return;
+                    }
+              
+                    /*
+                     * Synchronize active state
+                     */
+                    navLinks.forEach(link => {
+                      link.classList.remove('active');
+                    });
+              
+                    activeLink.classList.add('active');
+              
+              
+                    /*
+                     * Synchronize URL
+                     */
+                    if (window.location.hash !== activeId) {
+                      history.replaceState(
+                        null,
+                        '',
+                        activeId
+                      );
+                    }
+              
+                  },
+                  {
+                    /*
+                     * Account for sticky navbar
+                     */
+                    root: null,
+                    rootMargin: '-110px 0px -55% 0px',
+                    threshold: 0
+                  }
+                );
+              
+              
+                /*
+                 * Observe all navbar-linked sections
+                 */
+                sections.forEach(section => {
+                  observer.observe(section);
+                });
+              
+              
+                /*
+                 * -----------------------------------------
+                 * SCROLL RESTORATION
+                 * -----------------------------------------
+                 */
+                if ('scrollRestoration' in history) {
+                  history.scrollRestoration = 'manual';
+                }
+              
+              
+                /*
+                 * -----------------------------------------
+                 * INITIAL LOAD
+                 * -----------------------------------------
+                 *
+                 * Start at the top instead of restoring
+                 * previous browser scroll position.
+                 */
+                window.scrollTo(0, 0);
+              
               });
-            });
-          </script>
+              </script>
         </body>
 </html>
