@@ -251,3 +251,224 @@ footer a:not(.nav-link) {
 #Portfolio {
   padding: 1rem 0;
 }
+
+/* ================================
+   Government Procurement Materials
+   ================================ */
+
+.procurement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.procurement-card {
+  position: relative;
+  display: flex;
+  min-height: 250px;
+  overflow: hidden;
+  border-radius: 12px;
+  text-decoration: none;
+  background-image: url("assets/procurement-materials-grid.png");
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  background-color: #e9ecef;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Individual sections of the 3 × 3 image */
+
+.procurement-1 {
+  background-position: 0% 0%;
+}
+
+.procurement-2 {
+  background-position: 50% 0%;
+}
+
+.procurement-3 {
+  background-position: 100% 0%;
+}
+
+.procurement-4 {
+  background-position: 0% 50%;
+}
+
+.procurement-5 {
+  background-position: 50% 50%;
+}
+
+.procurement-6 {
+  background-position: 100% 50%;
+}
+
+.procurement-7 {
+  background-position: 0% 100%;
+}
+
+.procurement-8 {
+  background-position: 50% 100%;
+}
+
+.procurement-9 {
+  background-position: 100% 100%;
+}
+
+
+/* Dark gradient for readability */
+
+.procurement-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(0, 0, 0, 0.15) 35%,
+      rgba(0, 0, 0, 0.75) 100%
+    );
+  transition: background 0.25s ease;
+}
+
+
+/* Card content */
+
+.procurement-overlay {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  min-height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 24px;
+
+  color: #fff;
+}
+
+
+/* Title */
+
+.procurement-overlay h4 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
+
+/* Description */
+
+.procurement-overlay p {
+  max-width: 90%;
+  margin: 0;
+
+  font-size: 0.9rem;
+  line-height: 1.45;
+
+  color: rgba(255, 255, 255, 0.95);
+}
+
+
+/* View Content indicator */
+
+.view-content {
+  align-self: flex-start;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 15px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.96);
+  color: #173f3b;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.view-content span {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+
+/* Hover */
+
+.procurement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
+  text-decoration: none;
+}
+
+.procurement-card:hover::before {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.02) 0%,
+      rgba(0, 0, 0, 0.10) 30%,
+      rgba(0, 0, 0, 0.68) 100%
+    );
+}
+
+.procurement-card:hover .view-content {
+  transform: translateX(3px);
+  background: #fff;
+}
+
+
+/* Keyboard accessibility */
+
+.procurement-card:focus-visible {
+  outline: 3px solid rgba(13, 110, 253, 0.45);
+  outline-offset: 3px;
+}
+
+
+/* Tablet */
+
+@media (max-width: 991.98px) {
+  .procurement-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* Mobile */
+
+@media (max-width: 575.98px) {
+  .procurement-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .procurement-card {
+    min-height: 230px;
+  }
+
+  .procurement-overlay {
+    min-height: 230px;
+    padding: 20px;
+  }
+
+  .procurement-overlay h4 {
+    font-size: 1.1rem;
+  }
+}
