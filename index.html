@@ -24,7 +24,47 @@
             opacity: 1 !important;
             transform: translate(0) scale(1) !important;
         }
-      </style>
+  
+      /* Uniform project action buttons */
+      #Portfolio .row > [class*="col-"] .btn {
+        min-width: 170px;
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0.55rem 1rem;
+      }
+
+      #Portfolio .row > [class*="col-"] .card-body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #Portfolio .row > [class*="col-"] .card-body .btn {
+        margin-top: auto;
+        align-self: flex-start;
+      }
+
+      /* Distinguish the academic-project gallery */
+      #Portfolio .academic-projects-heading {
+        padding-top: 0.5rem;
+        border-top: 1px solid rgba(0,0,0,0.08);
+      }
+
+      #Portfolio .academic-projects-heading h3 {
+        font-weight: 700;
+      }
+
+      #Portfolio .bp-gallery .grid-item {
+        border-radius: 0.75rem;
+        overflow: hidden;
+      }
+
+      #Portfolio .bp-gallery .portfolio-item {
+        height: 100%;
+      }
+    </style>
     </noscript>
 
     <style>
@@ -318,327 +358,513 @@
           </section>
 
           <section class="section px-2 px-lg-4 pt-2 mb-2" id="Portfolio">
-            <div class="container">
-              <div class="text-center mb-4">
-                <h2 class="marker marker-center mt-3">Selected Projects</h2>
-                <p class="mx-auto mt-3" style="max-width: 720px;">
-                  Selected work in <strong>information design, digital communication,
-                  UX/UI design, and application development</strong>.
-                </p>
-              </div>
+  <div class="container">
 
-              <div class="row justify-content-center">
-  <div class="col-12">
-    <div class="mb-4">
-      <div class="text-muted text-small mb-2">
-        Information Design &amp; Visual Communication
-      </div>
+    <!-- SECTION HEADER -->
+    <div class="text-center mb-4">
+      <h2 class="marker marker-center mt-3">Selected Projects</h2>
 
-      <h3 class="h5 mb-2">
-        Government Procurement Information Materials
-      </h3>
-
-      <p class="mb-4">
-        A collection of visual learning materials translating procurement
-        policies, procedures, and guidelines into clear and accessible resources.
+      <p class="mx-auto mt-3" style="max-width: 720px;">
+        Selected work in <strong>information design, digital communication,
+        UX/UI design, and application development</strong>.
       </p>
     </div>
 
-    <div class="procurement-grid">
 
-      <!-- 1. Small Value Procurement -->
-      <a
-        class="procurement-card procurement-1"
-        href="https://canva.link/og75qyndtnt45l4"
-        target="_blank"
-        rel="noopener"
-      >
-        <div class="procurement-overlay">
-          <div>
-            <h4>Small Value Procurement</h4>
-            <p>
-              Policies, procedures, and guidelines for small value procurement.
+    <!-- =========================================
+         GOVERNMENT PROCUREMENT INFORMATION MATERIALS
+         ========================================= -->
+
+    <div class="row justify-content-center">
+      <div class="col-12 mb-4">
+
+        <div class="card h-100 shadow-sm">
+          <div class="card-body px-4 py-4">
+
+            <div class="text-muted text-small mb-2">
+              Information Design &amp; Visual Communication
+            </div>
+
+            <h3 class="h5 mb-2">
+              Government Procurement Information Materials
+            </h3>
+
+            <p class="mb-4">
+              A collection of visual learning materials translating procurement
+              policies, procedures, and guidelines into clear and accessible resources.
             </p>
+
+
+            <!-- 3 × 3 THUMBNAIL GRID -->
+            <div class="procurement-grid">
+
+
+              <!-- 1. Small Value Procurement -->
+              <a
+                class="procurement-card procurement-1"
+                href="https://canva.link/og75qyndtnt45l4"
+                target="_blank"
+                rel="noopener"
+                aria-label="View Small Value Procurement"
+              >
+                <div class="procurement-overlay">
+                  <div class="procurement-text">
+                    <h4>Small Value Procurement</h4>
+                  </div>
+
+                  <span class="view-content">
+                    View Content <span>↗</span>
+                  </span>
+                </div>
+              </a>
+
+
+              <!-- 2. Competitive Bidding -->
+              <a
+                class="procurement-card procurement-2"
+                href="https://canva.link/t5vkma03pygmoem"
+                target="_blank"
+                rel="noopener"
+                aria-label="View Competitive Bidding"
+              >
+                <div class="procurement-overlay">
+                  <div class="procurement-text">
+                    <h4>Competitive Bidding</h4>
+                  </div>
+
+                  <span class="view-content">
+                    View Content <span>↗</span>
+                  </span>
+                </div>
+              </a>
+
+
+              <!-- 3. Direct Acquisition -->
+              <a
+                class="procurement-card procurement-3"
+                href="https://canva.link/cs8fc5hlw4rga4m"
+                target="_blank"
+                rel="noopener"
+                aria-label="View Direct Acquisition"
+              >
+                <div class="procurement-overlay">
+                  <div class="procurement-text">
+                    <h4>Direct Acquisition</h4>
+                  </div>
+
+                  <span class="view-content">
+                    View Content <span>↗</span>
+                  </span>
+                </div>
+              </a>
+
+
+              <!-- 4. Brand Names -->
+              <a
+                class="procurement-card procurement-4"
+                href="https://canva.link/0beq81fcso1uz3z"
+                target="_blank"
+                rel="noopener"
+                aria-label="View Brand Names"
+              >
+                <div class="procurement-overlay">
+                  <div class="procurement-text">
+                    <h4>Brand Names</h4>
+                  </div>
+
+                  <span class="view-content">
+                    View Content <span>↗</span>
+                  </span>
+                </div>
+              </a>
+
+
+              <!-- 5. Splitting of Contracts -->
+              <a
+                class="procurement-card procurement-5"
+                href="https://canva.link/3k2moj66tzd0v23"
+                target="_blank"
+                rel="noopener"
+                aria-label="View Splitting of Contracts"
+              >
+                <div class="procurement-overlay">
+                  <div class="procurement-text">
+                    <h4>Splitting of Contracts</h4>
+                  </div>
+
+                  <span class="view-content">
+                    View Content <span>↗</span>
+                  </span>
+                </div>
+              </a>
+
+
+              <!-- 6. Direct Procurement for STI -->
+              <a
+                class="procurement-card procurement-6"
+                href="https://canva.link/hgkwedorpzj66xf"
+                target="_blank"
+                rel="noopener"
+                aria-label="View Direct Procurement for STI"
+              >
+                <div class="procurement-overlay">
+                  <div class="procurement-text">
+                    <h4>Direct Procurement for STI</h4>
+                  </div>
+
+                  <span class="view-content">
+                    View Content <span>↗</span>
+                  </span>
+                </div>
+              </a>
+
+
+              <!-- 7. mPhilGEPS Refresher -->
+              <a
+                class="procurement-card procurement-7"
+                href="https://canva.link/x2f11oxjn6mia7k"
+                target="_blank"
+                rel="noopener"
+                aria-label="View mPhilGEPS Refresher"
+              >
+                <div class="procurement-overlay">
+                  <div class="procurement-text">
+                    <h4>mPhilGEPS Refresher</h4>
+                  </div>
+
+                  <span class="view-content">
+                    View Content <span>↗</span>
+                  </span>
+                </div>
+              </a>
+
+
+              <!-- 8. Direct Contracting -->
+              <a
+                class="procurement-card procurement-8"
+                href="https://canva.link/lfrvbwihqsrsxkx"
+                target="_blank"
+                rel="noopener"
+                aria-label="View Direct Contracting"
+              >
+                <div class="procurement-overlay">
+                  <div class="procurement-text">
+                    <h4>Direct Contracting</h4>
+                  </div>
+
+                  <span class="view-content">
+                    View Content <span>↗</span>
+                  </span>
+                </div>
+              </a>
+
+
+              <!-- 9. Scientific, Scholarly or Artistic Work -->
+              <a
+                class="procurement-card procurement-9"
+                href="https://canva.link/9qz5xr2xp9svz4x"
+                target="_blank"
+                rel="noopener"
+                aria-label="View Scientific, Scholarly or Artistic Work"
+              >
+                <div class="procurement-overlay">
+                  <div class="procurement-text">
+                    <h4>Scientific, Scholarly or Artistic Work</h4>
+                  </div>
+
+                  <span class="view-content">
+                    View Content <span>↗</span>
+                  </span>
+                </div>
+              </a>
+
+            </div>
+            <!-- END PROCUREMENT GRID -->
+
           </div>
-
-          <span class="view-content">
-            View Content <span>↗</span>
-          </span>
         </div>
-      </a>
 
-      <!-- 2. Competitive Bidding -->
-      <a
-        class="procurement-card procurement-2"
-        href="https://canva.link/t5vkma03pygmoem"
-        target="_blank"
-        rel="noopener"
-      >
-        <div class="procurement-overlay">
-          <div>
-            <h4>Competitive Bidding</h4>
+      </div>
+    </div>
+
+
+    <!-- =========================================
+         OTHER SELECTED PROJECTS
+         3 COLUMNS
+         ========================================= -->
+
+    <div class="row">
+
+
+      <!-- UP MANILA PMO -->
+      <div class="col-lg-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body px-4 py-4">
+
+            <div class="text-muted text-small mb-2">
+              Digital Platform &amp; Web Communication
+            </div>
+
+            <h3 class="h5 mb-2">
+              UP Manila PMO Website
+            </h3>
+
             <p>
-              Policies, procedures, and guidelines for competitive bidding.
+              Supported website content, usability, functionality, information
+              organization, and digital dissemination for the UP Manila
+              Procurement Management Office.
             </p>
+
+            <a
+              class="btn btn-outline-secondary btn-sm"
+              href="https://pmo.upm.edu.ph/"
+              target="_blank"
+              rel="noopener"
+            >
+              Visit Website
+            </a>
+
           </div>
-
-          <span class="view-content">
-            View Content <span>↗</span>
-          </span>
         </div>
-      </a>
+      </div>
 
-      <!-- 3. Direct Acquisition -->
-      <a
-        class="procurement-card procurement-3"
-        href="https://canva.link/cs8fc5hlw4rga4m"
-        target="_blank"
-        rel="noopener"
-      >
-        <div class="procurement-overlay">
-          <div>
-            <h4>Direct Acquisition</h4>
+
+      <!-- MOSQUINATOR -->
+      <div class="col-lg-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body px-4 py-4">
+
+            <div class="text-muted text-small mb-2">
+              UX/UI Design &amp; Research
+            </div>
+
+            <h3 class="h5 mb-2">
+              Mosquinator
+            </h3>
+
             <p>
-              Policies, procedures, and guidelines for direct acquisition.
+              A community-based mobile and web application framework for dengue
+              reporting, information exchange, and public awareness in Pasig City.
             </p>
+
+            <p class="mb-3">
+              <strong>Role:</strong> Systems Analyst &amp; UI/UX Designer
+            </p>
+
+            <a
+              class="btn btn-outline-secondary btn-sm"
+              href="https://www.figma.com/design/zuQAVTuhHUJgRG8q1BH8YN/Mobile-and-Web---UI-Prototype?node-id=1-3847&amp;t=UEDP1EbPVlJL2gzo-1"
+              target="_blank"
+              rel="noopener"
+            >
+              View Figma Prototype
+            </a>
+
           </div>
-
-          <span class="view-content">
-            View Content <span>↗</span>
-          </span>
         </div>
-      </a>
+      </div>
 
-      <!-- 4. Brand Names -->
-      <a
-        class="procurement-card procurement-4"
-        href="https://canva.link/0beq81fcso1uz3z"
-        target="_blank"
-        rel="noopener"
-      >
-        <div class="procurement-overlay">
-          <div>
-            <h4>Brand Names</h4>
+
+      <!-- ASEANA PH -->
+      <div class="col-lg-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body px-4 py-4">
+
+            <div class="text-muted text-small mb-2">
+              UX/UI Design
+            </div>
+
+            <h3 class="h5 mb-2">
+              ASEANA PH
+            </h3>
+
             <p>
-              Policies, procedures, and guidelines for the procurement of brand names.
+              A freelance web application design project focused on interface
+              structure, user flows, and digital experience design.
             </p>
+
+            <a
+              class="btn btn-outline-secondary btn-sm"
+              href="https://www.figma.com/design/A4kauFLZUR8AGAIc4pFIW2/Web-Application-Design---ASEANA-PH-SYSTEM?node-id=0-1&amp;t=VwwUsMTs7pwYtX15-1"
+              target="_blank"
+              rel="noopener"
+            >
+              View Figma Design
+            </a>
+
           </div>
-
-          <span class="view-content">
-            View Content <span>↗</span>
-          </span>
         </div>
-      </a>
-
-      <!-- 5. Splitting of Contracts -->
-      <a
-        class="procurement-card procurement-5"
-        href="https://canva.link/3k2moj66tzd0v23"
-        target="_blank"
-        rel="noopener"
-      >
-        <div class="procurement-overlay">
-          <div>
-            <h4>Splitting of Contracts</h4>
-            <p>
-              Policies, procedures, and guidelines on splitting of contracts.
-            </p>
-          </div>
-
-          <span class="view-content">
-            View Content <span>↗</span>
-          </span>
-        </div>
-      </a>
-
-      <!-- 6. Direct Procurement for STI -->
-      <a
-        class="procurement-card procurement-6"
-        href="https://canva.link/hgkwedorpzj66xf"
-        target="_blank"
-        rel="noopener"
-      >
-        <div class="procurement-overlay">
-          <div>
-            <h4>Direct Procurement for STI</h4>
-            <p>
-              Procurement guidance for scientific, technological, and innovation
-              requirements.
-            </p>
-          </div>
-
-          <span class="view-content">
-            View Content <span>↗</span>
-          </span>
-        </div>
-      </a>
-
-      <!-- 7. mPhilGEPS Refresher -->
-      <a
-        class="procurement-card procurement-7"
-        href="https://canva.link/x2f11oxjn6mia7k"
-        target="_blank"
-        rel="noopener"
-      >
-        <div class="procurement-overlay">
-          <div>
-            <h4>mPhilGEPS Refresher</h4>
-            <p>
-              Updates, reminders, and learning materials for mPhilGEPS users.
-            </p>
-          </div>
-
-          <span class="view-content">
-            View Content <span>↗</span>
-          </span>
-        </div>
-      </a>
-
-      <!-- 8. Direct Contracting -->
-      <a
-        class="procurement-card procurement-8"
-        href="https://canva.link/lfrvbwihqsrsxkx"
-        target="_blank"
-        rel="noopener"
-      >
-        <div class="procurement-overlay">
-          <div>
-            <h4>Direct Contracting</h4>
-            <p>
-              Policies, procedures, and guidelines for direct contracting.
-            </p>
-          </div>
-
-          <span class="view-content">
-            View Content <span>↗</span>
-          </span>
-        </div>
-      </a>
-
-      <!-- 9. Scientific, Scholarly or Artistic Work -->
-      <a
-        class="procurement-card procurement-9"
-        href="https://canva.link/9qz5xr2xp9svz4x"
-        target="_blank"
-        rel="noopener"
-      >
-        <div class="procurement-overlay">
-          <div>
-            <h4>Scientific, Scholarly or Artistic Work</h4>
-            <p>
-              Procurement guidance for scientific, scholarly, and artistic work.
-            </p>
-          </div>
-
-          <span class="view-content">
-            View Content <span>↗</span>
-          </span>
-        </div>
-      </a>
+      </div>
 
     </div>
+
+
+    <!-- =========================================
+         ACADEMIC PROJECTS
+         ========================================= -->
+    <div class="academic-projects-heading text-center mt-4 mb-3">
+      <div class="text-muted text-small mb-1">Academic Projects</div>
+      <h3 class="h4 mb-2">Selected Academic Work</h3>
+      <p class="text-muted mx-auto mb-0" style="max-width: 720px;">
+        Earlier application development, UX/UI, and technology projects from my academic work.
+      </p>
+    </div>
+
+    <!-- =========================================
+         EXISTING PORTFOLIO GALLERY
+         ========================================= -->
+
+    <div class="container">
+      <div
+        class="grid bp-gallery pb-3"
+        data-aos="zoom-in-up"
+        data-aos-delay="100"
+      >
+
+        <div class="grid-sizer"></div>
+
+        <div class="grid-item">
+          <a href="#">
+            <figure class="portfolio-item">
+              <img
+                src="assets/portfolio/1-small.png"
+                data-bp="assets/portfolio/1.png"
+              />
+              <figcaption>
+                <h4 class="h5 mb-0">Mosquinator</h4>
+                <div>Capstone Project 1 &amp; 2</div>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+
+
+        <div class="grid-item">
+          <a href="#">
+            <figure class="portfolio-item">
+              <img
+                src="assets/portfolio/2-small.png"
+                data-bp="assets/portfolio/2.png"
+                data-caption="Example of an optional caption."
+              />
+              <figcaption>
+                <h4 class="h5 mb-0">Math Quiz Game</h4>
+                <div>
+                  Applications Development and Emerging Technologies
+                </div>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+
+
+        <div class="grid-item">
+          <a href="#">
+            <figure class="portfolio-item">
+              <img
+                src="assets/portfolio/3-small.png"
+                data-bp="assets/portfolio/3.png"
+                data-caption="Example of an optional caption."
+              />
+              <figcaption>
+                <h4 class="h5 mb-0">Philippine HistoQuiz</h4>
+                <div>Mobile Programming</div>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+
+
+        <div class="grid-item">
+          <a href="#">
+            <figure class="portfolio-item">
+              <img
+                src="assets/portfolio/4-small.png"
+                data-bp="assets/portfolio/4.png"
+              />
+              <figcaption>
+                <h4 class="h5 mb-0">
+                  Linking Aid: EPDM Application
+                  (Emergency Preparedness and Disaster Mitigation)
+                </h4>
+                <div>Platform Technologies</div>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+
+
+        <div class="grid-item">
+          <a href="#">
+            <figure class="portfolio-item">
+              <img
+                src="assets/portfolio/5-small.png"
+                data-bp="assets/portfolio/5.png"
+              />
+              <figcaption>
+                <h4 class="h5 mb-0">Jethy's Recipe App</h4>
+                <div>Advanced Mobile Programming</div>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+
+
+        <div class="grid-item">
+          <a href="#">
+            <figure class="portfolio-item">
+              <img
+                src="assets/portfolio/6-small.png"
+                data-bp="assets/portfolio/6.png"
+              />
+              <figcaption>
+                <h4 class="h5 mb-0">Kpop Merch</h4>
+                <div>Integrative Programming and Technologies</div>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+
+
+        <div class="grid-item">
+          <a href="#">
+            <figure class="portfolio-item">
+              <img
+                src="assets/portfolio/7-small.png"
+                data-bp="assets/portfolio/7.png"
+              />
+              <figcaption>
+                <h4 class="h5 mb-0">
+                  Ka Techy Facts - Tech Checks
+                </h4>
+                <div>The Entrepreneurial Mind</div>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+
+
+        <div class="grid-item">
+          <a href="#">
+            <figure class="portfolio-item">
+              <img
+                src="assets/portfolio/8-small.png"
+                data-bp="assets/portfolio/8.png"
+              />
+              <figcaption>
+                <h4 class="h5 mb-0">Among Us</h4>
+                <div>Web Systems and Technologies</div>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
   </div>
-</div>
+</section>
 
-                <div class="col-lg-4 mb-3">
-                  <div class="card h-100 shadow-sm">
-                    <div class="card-body px-4 py-4">
-                      <div class="text-muted text-small mb-2">Digital Platform &amp; Web Communication</div>
-                      <h3 class="h5 mb-2">UP Manila PMO Website</h3>
-                      <p>Supported website content, usability, functionality, information organization, and digital dissemination for the UP Manila Procurement Management Office.</p>
-                      <a class="btn btn-outline-secondary btn-sm" href="https://pmo.upm.edu.ph/" target="_blank" rel="noopener">Visit Website</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 mb-3">
-                  <div class="card h-100 shadow-sm">
-                    <div class="card-body px-4 py-4">
-                      <div class="text-muted text-small mb-2">UX/UI Design &amp; Research</div>
-                      <h3 class="h5 mb-2">Mosquinator</h3>
-                      <p>A community-based mobile and web application framework for dengue reporting, information exchange, and public awareness in Pasig City.</p>
-                      <p class="mb-3"><strong>Role:</strong> Systems Analyst &amp; UI/UX Designer</p>
-                      <a class="btn btn-outline-secondary btn-sm" href="https://www.figma.com/design/zuQAVTuhHUJgRG8q1BH8YN/Mobile-and-Web---UI-Prototype?node-id=1-3847&amp;t=UEDP1EbPVlJL2gzo-1" target="_blank" rel="noopener">View Figma Prototype</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 mb-3">
-                  <div class="card h-100 shadow-sm">
-                    <div class="card-body px-4 py-4">
-                      <div class="text-muted text-small mb-2">UX/UI Design</div>
-                      <h3 class="h5 mb-2">ASEANA PH</h3>
-                      <p>A freelance web application design project focused on interface structure, user flows, and digital experience design.</p>
-                      <a class="btn btn-outline-secondary btn-sm" href="https://www.figma.com/design/A4kauFLZUR8AGAIc4pFIW2/Web-Application-Design---ASEANA-PH-SYSTEM?node-id=0-1&amp;t=VwwUsMTs7pwYtX15-1" target="_blank" rel="noopener">View Figma Design</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="container">
-              <div class="grid bp-gallery pb-3" data-aos="zoom-in-up" data-aos-delay="100">
-                <div class="grid-sizer"></div>
-                <div class="grid-item"><a href="#">
-                    <figure class="portfolio-item"><img src="assets/portfolio/1-small.png" data-bp="assets/portfolio/1.png"/>
-                      <figcaption>
-                        <h4 class="h5 mb-0">Mosquinator</h4>
-                        <div>Capstone Project 1 & 2</div>
-                      </figcaption>
-                    </figure></a></div>
-                <div class="grid-item"><a href="#">
-                    <figure class="portfolio-item"><img src="assets/portfolio/2-small.png" data-bp="assets/portfolio/2.png" data-caption="Example of an optional caption."/>
-                      <figcaption> 
-                        <h4 class="h5 mb-0">Math Quiz Game</h4>
-                        <div>Applications Development and Emerging Technologies</div>                           
-                      </figcaption>
-                    </figure></a></div>
-                <div class="grid-item"><a href="#">
-                    <figure class="portfolio-item"><img src="assets/portfolio/3-small.png" data-bp="assets/portfolio/3.png" data-caption="Example of an optional caption."/>
-                      <figcaption> 
-                        <h4 class="h5 mb-0">Philippine HistoQuiz</h4>
-                        <div>Mobile Programming</div>
-                      </figcaption>
-                    </figure></a></div>
-                <div class="grid-item"><a href="#">
-                    <figure class="portfolio-item"><img src="assets/portfolio/4-small.png" data-bp="assets/portfolio/4.png"/>
-                      <figcaption>
-                        <h4 class="h5 mb-0">Linking Aid: EPDM Application (Emergency Preparedness and Disaster Mitigation)</h4>
-                        <div>Platform Technologies</div>
-                      </figcaption>
-                    </figure></a></div>
-                <div class="grid-item"><a href="#">
-                    <figure class="portfolio-item"><img src="assets/portfolio/5-small.png" data-bp="assets/portfolio/5.png"/>
-                      <figcaption>
-                        <h4 class="h5 mb-0">Jethy's Recipe App</h4>
-                        <div>Advanced Mobile Programming</div>
-                      </figcaption>
-                    </figure></a></div>
-                <div class="grid-item"><a href="#">
-                    <figure class="portfolio-item"><img src="assets/portfolio/6-small.png" data-bp="assets/portfolio/6.png"/>
-                      <figcaption>
-                        <h4 class="h5 mb-0">Kpop Merch</h4>
-                        <div>Integrative Programming and Technologies</div>
-                      </figcaption>
-                    </figure></a></div>
-                <div class="grid-item"><a href="#">
-                    <figure class="portfolio-item"><img src="assets/portfolio/7-small.png" data-bp="assets/portfolio/7.png"/>
-                      <figcaption>
-                        <h4 class="h5 mb-0">Ka Techy Facts - Tech Checks</h4>
-                        <div>The Entrepreneurial Mind</div>
-                      </figcaption>
-                    </figure></a></div>
-                <div class="grid-item"><a href="#">
-                    <figure class="portfolio-item"><img src="assets/portfolio/8-small.png" data-bp="assets/portfolio/8.png"/>
-                      <figcaption>
-                        <h4 class="h5 mb-0">Among Us</h4>
-                        <div>Web Systems and Technologies</div>
-                      </figcaption>
-                    </figure>
-                  </a></div>
-                </div>
-              </div>
-            </div>
-              </div>
-            </div>
-          </section>
           <section class="section px-3 px-lg-4 pt-3 mt-3" id="Research">
             <div class="container-narrow">
               <div class="text-center mb-3">
@@ -708,148 +934,86 @@
           <script src="./scripts/purecounter.min.js?ver=1.2.0"></script>
           <script src="./scripts/aos.min.js?ver=1.2.0"></script>
           <script src="./scripts/main.js?ver=1.2.0"></script>
-          
+
           <script>
             document.addEventListener('DOMContentLoaded', function () {
               const nav = document.querySelector('#header-nav');
               const navLinks = document.querySelectorAll('#header-nav .nav-link');
-          
-              // Sections included in the navbar
-              const sections = Array.from(navLinks)
-                .map(link => document.querySelector(link.getAttribute('href')))
-                .filter(Boolean);
-          
-              // Track the section currently visible on screen
-              let currentSectionId = '';
-          
-              function updateActiveSection() {
-                const navbarHeight = nav ? nav.offsetHeight : 0;
-                const scrollPosition = window.scrollY + navbarHeight + 30;
-          
-                let currentSection = sections[0];
-          
-                sections.forEach(section => {
-                  if (section.offsetTop <= scrollPosition) {
-                    currentSection = section;
-                  }
-                });
-          
-                if (!currentSection) return;
-          
-                const currentId = '#' + currentSection.id;
-          
-                // Update active navbar link
-                navLinks.forEach(link => {
-                  link.classList.toggle(
-                    'active',
-                    link.getAttribute('href') === currentId
-                  );
-                });
-          
-                // Update URL hash without page reload
-                if (window.location.hash !== currentId) {
-                  history.replaceState(null, '', currentId);
-                }
-          
-                currentSectionId = currentId;
-              }
-          
+            
+              // Ensure Home active on first load
+              const homeLink = document.querySelector('#header-nav .nav-link[href="#home"]');
+              if (homeLink) homeLink.classList.add('active');
+            
               // Scroll function:
               // About Me → center screen
               // Others → top under navbar
               const scrollToSection = (targetElement, center = false) => {
                 const navbarHeight = nav ? nav.offsetHeight : 0;
-                const elementTop =
-                  targetElement.getBoundingClientRect().top + window.pageYOffset;
-          
+                const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
                 let scrollToPosition;
-          
+            
                 if (center) {
                   const elementHeight = targetElement.offsetHeight;
                   const viewportHeight = window.innerHeight;
-          
                   scrollToPosition =
-                    elementTop -
-                    (viewportHeight / 2) +
-                    (elementHeight / 2) -
-                    (navbarHeight / 2);
+                    elementTop - (viewportHeight / 2) + (elementHeight / 2) - (navbarHeight / 2);
                 } else {
                   scrollToPosition = elementTop - navbarHeight - 10;
                 }
-          
+            
                 window.scrollTo({
                   top: Math.max(0, scrollToPosition),
                   behavior: 'smooth'
                 });
               };
-          
-              // Navbar click handling
+            
+              // Click handling
               navLinks.forEach(link => {
                 link.addEventListener('click', function (e) {
                   const targetId = this.getAttribute('href');
-          
                   if (!targetId || !targetId.startsWith('#')) return;
-          
+            
                   const targetElement = document.querySelector(targetId);
-          
                   if (!targetElement) return;
-          
+            
                   e.preventDefault();
-          
-                  // Update active link immediately
+            
+                  // Remove active manually (ScrollSpy will reapply correctly)
                   navLinks.forEach(l => l.classList.remove('active'));
                   this.classList.add('active');
-          
+            
                   // Collapse mobile navbar after click
-                  const navbarCollapse =
-                    document.querySelector('#navbarSupportedContent');
-          
+                  const navbarCollapse = document.querySelector('#navbarSupportedContent');
                   if (navbarCollapse.classList.contains('show')) {
                     new bootstrap.Collapse(navbarCollapse).hide();
                   }
-          
+            
                   // Only About Me gets centered
-                  const shouldCenter = targetId === '#About_Me';
-          
+                  const shouldCenter = targetId === "#About_Me";
                   scrollToSection(targetElement, shouldCenter);
-          
-                  // Update URL hash immediately
+            
+                  // Update URL hash
                   history.replaceState(null, '', targetId);
                 });
               });
-          
-              // Update active section and URL while scrolling
-              window.addEventListener('scroll', updateActiveSection, {
-                passive: true
-              });
-          
+            
               // Force top on reload
               if (history.scrollRestoration) {
                 history.scrollRestoration = 'manual';
               }
-          
               window.scrollTo(0, 0);
-          
-              // Initialize active section
-              updateActiveSection();
             });
           </script>
-          
+
           <script>
             document.addEventListener('DOMContentLoaded', function () {
               document.querySelectorAll('.project-lightbox-link').forEach(function (link) {
                 link.addEventListener('click', function (e) {
                   const image = this.querySelector('img[data-bp]');
-          
                   if (!image) return;
-          
                   if (typeof BigPicture === 'function') {
                     e.preventDefault();
-          
-                    BigPicture({
-                      el: image,
-                      gallery: '.bp-gallery'
-                    });
+                    BigPicture({ el: image, gallery: '.bp-gallery' });
                   }
                 });
               });
