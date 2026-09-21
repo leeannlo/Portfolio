@@ -487,6 +487,28 @@ img.avatar {
   color: currentColor;
 }
 
+#Portfolio .view {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  line-height: 1;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#Portfolio .view-icon {
+  width: 1em;
+  height: 1em;
+  flex: 0 0 1em;
+  display: block;
+  color: currentColor;
+}
+
+#Portfolio .procurement-card:hover .view {
+  transform: translateX(3px);
+}
+
 /* =========================================================
    OTHER PROJECT CARDS
    ========================================================= */
